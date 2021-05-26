@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@types/react-router-dom": "^5.1.7",
-    "@whiteboards-io/plugins": "^1.1.2",
+    "@whiteboards-io/plugins": "^1.1.3",
     "react-router-dom": "^5.2.0",
     "serve": "^11.3.2"
   }

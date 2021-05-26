@@ -1,12 +1,11 @@
 import React from "react";
-import {pluginToHost} from "@whiteboards-io/plugins";
+import {updateTemplateContent} from "@whiteboards-io/plugins";
 
 export default function TemplateConfig() {
   return <>
     <h3>Hello world!</h3>
     <p>This is a very simple template.</p>
-    <button onClick={() => pluginToHost("onGenerate", {
-      content: {
+    <button onClick={() => updateTemplateContent({
         cards: {
           _index: {
             card1: true
@@ -23,6 +22,7 @@ export default function TemplateConfig() {
           }
         }
       }
-    })}>Click to continue</button>
+    )}>Click to continue
+    </button>
   </>;
 }

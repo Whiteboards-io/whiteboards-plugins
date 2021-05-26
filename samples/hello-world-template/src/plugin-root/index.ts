@@ -6,7 +6,6 @@ export default function PluginRoot() {
   useEffect(() => {
     registerTemplate({
       id: "hello-world-template",
-      fixed: true,
       title: "Hello World",
       description: "This is an example plugin with configuration screen",
       illustration: window.location.origin + logo,
