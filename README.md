@@ -42,7 +42,7 @@ registerTemplate({
   fixed: true,
   title: "Hello World Template",
   description: "This is a hello world template",
-  illustration: helloImage,
+  illustration: window.location.origin + helloImage,
   content: {
     cards: {
       _index: {
