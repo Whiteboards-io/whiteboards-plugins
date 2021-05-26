@@ -16,6 +16,12 @@ export interface TemplateDefinition {
   content: Record<string, unknown>;
 }
 
+export interface HostMessage {
+  action: string;
+  payload: unknown;
+  executionId: string;
+}
+
 export default interface AbstractWhiteboardsPlugin {
   registerTemplate: (definition: TemplateDefinition) => Promise<void>;
   updateTemplateContent: (content: Record<string, unknown> | null) => Promise<void>;
@@ -30,6 +36,7 @@ export default interface AbstractWhiteboardsPlugin {
   ) => Promise<T>;
 
   pluginToHost: (action: string, payload?: unknown) => string;
+  onHostToPlugin: (callback: (message: HostMessage) => void) => () => void;
 
   waitForExecution: <T> (executionId: string, executionTimeout?: number | null) => Promise<T>;
 }

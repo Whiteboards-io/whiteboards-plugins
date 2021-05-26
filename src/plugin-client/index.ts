@@ -1,4 +1,5 @@
-import { v4 as uuidv4 } from "uuid";
+import {v4 as uuidv4} from "uuid";
+import {HostMessage} from "../abstract-whiteboards-plugin";
 
 export function pluginToHost(action: string, payload: unknown = undefined): string {
   const executionId = uuidv4();
@@ -15,17 +16,35 @@ export function pluginToHost(action: string, payload: unknown = undefined): stri
   return executionId;
 }
 
+export function onHostToPlugin(callback: (message: HostMessage) => void): () => void {
+  const listener = (event: MessageEvent) => {
+    try {
+      const message = JSON.parse(event.data);
+      if (message.action) {
+        console.debug("Host to plugin", message);
+        callback(message);
+      }
+    } catch (e) {
+      // skip
+    }
+  };
+  window.addEventListener("message", listener);
+
+  return () => {
+    window.removeEventListener("message", listener);
+  };
+}
+
 export async function waitForExecution(executionId: string, executionTimeout: number | null = 10000): Promise<unknown> {
-  let listener, timeout;
+  let cancel: (() => void) | undefined;
+  let timeout = null;
 
   const result = new Promise((resolve, reject) => {
-    listener = (event: MessageEvent) => {
-      const message = JSON.parse(event.data);
+    cancel = onHostToPlugin((message) => {
       if (message.executionId === executionId) {
         resolve(message.payload);
       }
-    };
-    window.addEventListener("message", listener);
+    });
     if (executionTimeout) {
       timeout = setTimeout(reject, executionTimeout);
     }
@@ -34,8 +53,8 @@ export async function waitForExecution(executionId: string, executionTimeout: nu
   try {
     return await result;
   } finally {
-    if (listener) {
-      window.removeEventListener("message", listener);
+    if (cancel) {
+      cancel();
     }
     if (timeout) {
       clearTimeout(timeout);

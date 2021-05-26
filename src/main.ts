@@ -8,5 +8,6 @@ export const {
   updateTemplateContent,
 
   pluginToHost,
+  onHostToPlugin,
   waitForExecution
 } = WhiteboardsPlugin;
