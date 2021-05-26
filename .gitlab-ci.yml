@@ -15,7 +15,7 @@ lint-and-test:
     - yarn add -D esbuild
     - yarn test
     - yarn lint
-    - yarn build-all
+    - yarn build
 
 # Deploy docs to Gitlab pages
 pages:
