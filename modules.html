@@ -64,9 +64,11 @@
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function"><a href="modules.html#delaymillis" class="tsd-kind-icon">delay<wbr>Millis</a></li>
-								<li class="tsd-kind-function"><a href="modules.html#foo" class="tsd-kind-icon">foo</a></li>
-								<li class="tsd-kind-function"><a href="modules.html#greet" class="tsd-kind-icon">greet</a></li>
+								<li class="tsd-kind-function"><a href="modules.html#getjirasites" class="tsd-kind-icon">get<wbr>Jira<wbr>Sites</a></li>
+								<li class="tsd-kind-function"><a href="modules.html#oauthapirequest" class="tsd-kind-icon">oauth<wbr>Api<wbr>Request</a></li>
+								<li class="tsd-kind-function"><a href="modules.html#plugintohost" class="tsd-kind-icon">plugin<wbr>ToHost</a></li>
+								<li class="tsd-kind-function"><a href="modules.html#registertemplate" class="tsd-kind-icon">register<wbr>Template</a></li>
+								<li class="tsd-kind-function"><a href="modules.html#waitforexecution" class="tsd-kind-icon">wait<wbr>For<wbr>Execution</a></li>
 							</ul>
 						</section>
 					</div>
@@ -75,22 +77,100 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function">
-					<a name="delaymillis" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> delay<wbr>Millis</h3>
+					<a name="getjirasites" class="tsd-anchor"></a>
+					<h3>get<wbr>Jira<wbr>Sites</h3>
 					<ul class="tsd-signatures tsd-kind-function">
-						<li class="tsd-signature tsd-kind-icon">delay<wbr>Millis<span class="tsd-signature-symbol">(</span>delayMs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Jira<wbr>Sites<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">OauthSite</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/f7768b6/src/main.ts#L1">main.ts:1</a></li>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/de6a23c/src/abstract-whiteboards-plugin.ts#L22">abstract-whiteboards-plugin.ts:22</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">OauthSite</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="oauthapirequest" class="tsd-anchor"></a>
+					<h3>oauth<wbr>Api<wbr>Request</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">oauth<wbr>Api<wbr>Request<span class="tsd-signature-symbol">(</span>siteId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, params<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span>, method<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, body<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/de6a23c/src/abstract-whiteboards-plugin.ts#L24">abstract-whiteboards-plugin.ts:24</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>delayMs: <span class="tsd-signature-type">number</span></h5>
+									<h5>siteId: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>path: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> params: <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> method: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> body: <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="plugintohost" class="tsd-anchor"></a>
+					<h3>plugin<wbr>ToHost</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">plugin<wbr>ToHost<span class="tsd-signature-symbol">(</span>action<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, payload<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/de6a23c/src/abstract-whiteboards-plugin.ts#L32">abstract-whiteboards-plugin.ts:32</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>action: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> payload: <span class="tsd-signature-type">unknown</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="registertemplate" class="tsd-anchor"></a>
+					<h3>register<wbr>Template</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">register<wbr>Template<span class="tsd-signature-symbol">(</span>definition<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TemplateDefinition</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/de6a23c/src/abstract-whiteboards-plugin.ts#L21">abstract-whiteboards-plugin.ts:21</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>definition: <span class="tsd-signature-type">TemplateDefinition</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -98,42 +178,28 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function">
-					<a name="foo" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> foo</h3>
+					<a name="waitforexecution" class="tsd-anchor"></a>
+					<h3>wait<wbr>For<wbr>Execution</h3>
 					<ul class="tsd-signatures tsd-kind-function">
-						<li class="tsd-signature tsd-kind-icon">foo<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">wait<wbr>For<wbr>Execution<span class="tsd-signature-symbol">(</span>executionId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, executionTimeout<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/f7768b6/src/main.ts#L5">main.ts:5</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">&gt;</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function">
-					<a name="greet" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagConst">Const</span> greet</h3>
-					<ul class="tsd-signatures tsd-kind-function">
-						<li class="tsd-signature tsd-kind-icon">greet<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/f7768b6/src/main.ts#L3">main.ts:3</a></li>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/de6a23c/src/abstract-whiteboards-plugin.ts#L34">abstract-whiteboards-plugin.ts:34</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>name: <span class="tsd-signature-type">string</span></h5>
+									<h5>executionId: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> executionTimeout: <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -150,13 +216,19 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-function">
-						<a href="modules.html#delaymillis" class="tsd-kind-icon">delay<wbr>Millis</a>
+						<a href="modules.html#getjirasites" class="tsd-kind-icon">get<wbr>Jira<wbr>Sites</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="modules.html#foo" class="tsd-kind-icon">foo</a>
+						<a href="modules.html#oauthapirequest" class="tsd-kind-icon">oauth<wbr>Api<wbr>Request</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="modules.html#greet" class="tsd-kind-icon">greet</a>
+						<a href="modules.html#plugintohost" class="tsd-kind-icon">plugin<wbr>ToHost</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#registertemplate" class="tsd-kind-icon">register<wbr>Template</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#waitforexecution" class="tsd-kind-icon">wait<wbr>For<wbr>Execution</a>
 					</li>
 				</ul>
 			</nav>
