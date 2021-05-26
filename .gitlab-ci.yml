@@ -8,7 +8,7 @@ stages:
   - test
   - deploy
 
-lint-and-test:
+lint-and-test-api:
   stage: test
   script:
     - yarn install
@@ -16,6 +16,13 @@ lint-and-test:
     - yarn test
     - yarn lint
     - yarn build
+
+lint-and-test-sample-plugins:
+  stage: test
+  script:
+    - cd sample-plugins
+    - npm install
+    - npm build
 
 # Deploy docs to Gitlab pages
 pages:
