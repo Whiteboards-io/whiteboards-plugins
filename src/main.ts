@@ -1,10 +1,10 @@
-export const delayMillis = (delayMs: number): Promise<void> => new Promise(resolve => setTimeout(resolve, delayMs));
+import WhiteboardsPlugin from "./whiteboads-plugin";
 
-export const greet = (name: string): string => `Hello ${name}`
+export const {
+  getJiraSites,
+  oauthApiRequest,
+  registerTemplate,
 
-export const foo = async (): Promise<boolean> => {
-  console.log(greet('World'))
-  await delayMillis(1000)
-  console.log('done')
-  return true
-}
+  pluginToHost,
+  waitForExecution
+} = WhiteboardsPlugin;

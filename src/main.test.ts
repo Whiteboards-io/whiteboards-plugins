@@ -1,9 +1,7 @@
-import { greet } from './main'
+import * as api from './main'
+import AbstractWhiteboardsPlugin from "./abstract-whiteboards-plugin";
 
-test('the data is peanut butter', () => {
-  expect(1).toBe(1)
-});
-
-test('greeting', () => {
-  expect(greet('Foo')).toBe('Hello Foo')
+test('all methods were exported', () => {
+  const checkApi : AbstractWhiteboardsPlugin = api;
+  expect(checkApi).not.toBe(null);
 });
