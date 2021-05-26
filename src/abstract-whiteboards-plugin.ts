@@ -18,7 +18,7 @@ export interface TemplateDefinition {
 
 export default interface AbstractWhiteboardsPlugin {
   registerTemplate: (definition: TemplateDefinition) => Promise<void>;
-  updateTemplateContent: (content: Record<string, unknown>) => Promise<void>;
+  updateTemplateContent: (content: Record<string, unknown> | null) => Promise<void>;
 
   getJiraSites: () => Promise<OauthSite[]>;
   oauthApiRequest: <T> (
