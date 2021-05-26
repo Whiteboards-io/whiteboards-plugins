@@ -21,15 +21,15 @@ export default interface AbstractWhiteboardsPlugin {
   registerTemplate: (definition: TemplateDefinition) => Promise<void>;
   getJiraSites: () => Promise<OauthSite[]>;
 
-  oauthApiRequest: (
+  oauthApiRequest: <T> (
     siteId: string | undefined | null,
     path: string,
     params?: Record<string, unknown>,
     method?: string,
     body?: Record<string, unknown>,
-  ) => Promise<unknown>;
+  ) => Promise<T>;
 
   pluginToHost: (action: string, payload?: unknown) => string;
 
-  waitForExecution: (executionId: string, executionTimeout?: number | null) => Promise<unknown>;
+  waitForExecution: <T> (executionId: string, executionTimeout?: number | null) => Promise<T>;
 }
