@@ -9,7 +9,6 @@ export interface OauthSite {
 
 export interface TemplateDefinition {
   id: string;
-  fixed: boolean;
   title: string;
   description: string;
   illustration: string;
@@ -19,8 +18,9 @@ export interface TemplateDefinition {
 
 export default interface AbstractWhiteboardsPlugin {
   registerTemplate: (definition: TemplateDefinition) => Promise<void>;
-  getJiraSites: () => Promise<OauthSite[]>;
+  updateTemplateContent: (content: Record<string, unknown>) => Promise<void>;
 
+  getJiraSites: () => Promise<OauthSite[]>;
   oauthApiRequest: <T> (
     siteId: string | undefined | null,
     path: string,
