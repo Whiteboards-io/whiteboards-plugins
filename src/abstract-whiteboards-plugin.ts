@@ -1,10 +1,10 @@
-export type Viewport = {
+export interface Viewport {
   zoom: number; rectX: number; rectY: number; rectMaxX: number; rectMaxY: number
-};
+}
 
-export type ViewportTranslate = {
+export interface ViewportTranslate {
   recommendedZoom: number; translate: [number, number]; animationDuration: number
-};
+}
 
 export interface OauthSite {
   url: string;
@@ -24,10 +24,12 @@ export interface TemplateDefinition {
   content: Record<string, unknown>;
 }
 
+export type ExecutionId = string;
+
 export interface HostMessage {
   action: string;
   payload: unknown;
-  executionId: string;
+  executionId: ExecutionId;
 }
 
 export default interface AbstractWhiteboardsPlugin {
@@ -104,7 +106,7 @@ export default interface AbstractWhiteboardsPlugin {
    * @param action
    * @param payload
    */
-  pluginToHost: (action: string, payload?: unknown) => string;
+  pluginToHost: (action: string, payload?: unknown) => ExecutionId;
 
   /**
    * Connect a listener to messages coming from the host app
@@ -119,5 +121,5 @@ export default interface AbstractWhiteboardsPlugin {
    * @param executionId
    * @param executionTimeout
    */
-  waitForExecution: <T> (executionId: string, executionTimeout?: number | null) => Promise<T>;
+  waitForExecution: <T> (executionId: ExecutionId, executionTimeout?: number | null) => Promise<T>;
 }

@@ -1,3 +1,4 @@
+import {ExecutionId, HostMessage, OauthSite, TemplateDefinition, Viewport, ViewportTranslate} from "./abstract-whiteboards-plugin";
 import WhiteboardsPlugin from "./whiteboads-plugin";
 
 export const {
@@ -18,3 +19,12 @@ export const {
   onHostToPlugin,
   waitForExecution
 } = WhiteboardsPlugin;
+
+export type {
+  Viewport,
+  ViewportTranslate,
+  OauthSite,
+  TemplateDefinition,
+  HostMessage,
+  ExecutionId
+};
