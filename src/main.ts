@@ -1,4 +1,11 @@
-import {ExecutionId, HostMessage, OauthSite, TemplateDefinition, Viewport, ViewportTranslate} from "./abstract-whiteboards-plugin";
+import AbstractWhiteboardsPlugin, {
+  ExecutionId,
+  HostMessage,
+  OauthSite,
+  TemplateDefinition,
+  Viewport,
+  ViewportTranslate
+} from "./abstract-whiteboards-plugin";
 import WhiteboardsPlugin from "./whiteboads-plugin";
 
 export const {
@@ -21,6 +28,7 @@ export const {
 } = WhiteboardsPlugin;
 
 export type {
+  AbstractWhiteboardsPlugin,
   Viewport,
   ViewportTranslate,
   OauthSite,
