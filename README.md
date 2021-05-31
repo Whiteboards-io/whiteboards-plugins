@@ -69,7 +69,7 @@ registerTemplate({
 
 ## More examples
 
-Check out the [samples directory](samples/README.md)
+Check out the [samples directory](sample-plugins/README.md)
 
 ## Feedback
 
