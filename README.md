@@ -14,10 +14,15 @@ Production version of plugins are loaded in a sandboxed iframe, with Content Sec
 
 ### Development
 
+Prerequisites:
+- Whiteboards.io organisation account: https://app.whiteboards/signup
+
 In order to develop a plugin you need to setup a project with http server.
 For example using [Create React App](https://create-react-app.dev/docs/getting-started) and using http://localhost:3000 url in development console at Whiteboards.io
 
-### Deployment
+Once you have your development environment set up, and a hello world running, go to https://app.whiteboards/$YOUR_ORGANISATION/developers and follow the instructions.
+
+### Production deployment
 
 You can make your Whiteboards.io plugin available for other users. In order to do that your plugin must be packaged in a ZIP file.
 
@@ -31,7 +36,7 @@ Start from installing the library in your plugin project:
 npm install --save-dev @whiteboards-io/plugins
 ```
 
-### Example: Custom template
+### Example: Custom static template
 
 ```typescript
 import { registerTemplate } from "@whiteboards-io/plugins";
@@ -62,6 +67,9 @@ registerTemplate({
 });
 ```
 
+## More examples
+
+Check out the [samples directory](samples/README.md)
 
 ## Feedback
 
