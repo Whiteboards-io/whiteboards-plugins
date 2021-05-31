@@ -1,9 +1,25 @@
-import {pluginToHost, waitForExecution} from "./index";
+import {onHostToPlugin, pluginToHost, waitForExecution} from "./index";
+import {CancelCallback, HostMessage} from "../abstract-whiteboards-plugin";
 
-export async function  getPluginBoardData<T>(): Promise<T> {
+export async function getPluginBoardData<T>(): Promise<T> {
   return (await waitForExecution(pluginToHost("getPluginBoardData"))) as T;
 }
 
 export async function setPluginBoardData<T>(pluginData: T): Promise<void> {
   await waitForExecution(pluginToHost("setPluginBoardData", pluginData));
+}
+
+export function watchPluginBoardData<T>(callback: (pluginData: T) => void): CancelCallback {
+  const executionId = pluginToHost("watchPluginBoardData");
+
+  const cancel = onHostToPlugin((message: HostMessage) => {
+    if (message.executionId === executionId) {
+      callback(message.payload as T);
+    }
+  });
+
+  return () => {
+    cancel();
+    pluginToHost("cancelPluginBoardDataWatch", {executionId});
+  };
 }

@@ -1,4 +1,5 @@
 import AbstractWhiteboardsPlugin, {
+  CancelCallback,
   ExecutionId,
   HostMessage,
   OauthSite,
@@ -15,6 +16,7 @@ export const {
 
   getPluginBoardData,
   setPluginBoardData,
+  watchPluginBoardData,
 
   getJiraSites,
   oauthApiRequest,
@@ -34,5 +36,6 @@ export type {
   OauthSite,
   TemplateDefinition,
   HostMessage,
-  ExecutionId
+  ExecutionId,
+  CancelCallback,
 };

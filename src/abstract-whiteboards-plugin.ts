@@ -32,6 +32,8 @@ export interface HostMessage {
   executionId: ExecutionId;
 }
 
+export type CancelCallback = () => void;
+
 export default interface AbstractWhiteboardsPlugin {
   /**
    * Get current viewport coords, and zoom
@@ -61,6 +63,12 @@ export default interface AbstractWhiteboardsPlugin {
    * @param pluginData
    */
   setPluginBoardData: <T>(pluginData: T) => Promise<void>,
+
+  /**
+   * Observe plugin data changes, receive the current state, and then wait for real time updates.
+   * @param callback
+   */
+  watchPluginBoardData: <T>(callback: (pluginData: T) => void) => CancelCallback
 
 
   /**
