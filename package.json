@@ -19,7 +19,8 @@
     "clean": "rm -rf dist build package",
     "docs": "typedoc --entryPoints src/main.ts",
     "build": "yarn clean && tsc -p tsconfig.json",
-    "release": "release-it"
+    "release": "release-it",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@types/jest": "^26.0.21",
@@ -31,7 +32,7 @@
     "husky": "^6.0.0",
     "jest": "26.6.0",
     "prettier": "^2.3.0",
-    "prettier-quick": "0.0.5",
+    "pretty-quick": "^3.1.0",
     "release-it": "^14.7.0",
     "ts-jest": "^26.5.4",
     "typedoc": "^0.20.35",
