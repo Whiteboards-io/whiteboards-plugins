@@ -35,7 +35,7 @@ export function onHostToPlugin(callback: (message: HostMessage) => void): () => 
   };
 }
 
-export async function waitForExecution(executionId: string, executionTimeout: number | null = 10000): Promise<unknown> {
+export async function waitForExecution<T>(executionId: string, executionTimeout: number | null = 10000): Promise<T> {
   let cancel: (() => void) | undefined;
   let timeout = null;
 
@@ -51,7 +51,7 @@ export async function waitForExecution(executionId: string, executionTimeout: nu
   });
 
   try {
-    return await result;
+    return await result as T;
   } finally {
     if (cancel) {
       cancel();

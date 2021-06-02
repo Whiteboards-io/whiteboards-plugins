@@ -1,9 +1,15 @@
 export interface Viewport {
-  zoom: number; rectX: number; rectY: number; rectMaxX: number; rectMaxY: number
+  zoom: number;
+  rectX: number;
+  rectY: number;
+  rectMaxX: number;
+  rectMaxY: number
 }
 
 export interface ViewportTranslate {
-  recommendedZoom: number; translate: [number, number]; animationDuration: number
+  recommendedZoom: number;
+  translate: [number, number];
+  animationDuration: number
 }
 
 export interface SidebarToolDefinition {
@@ -39,6 +45,28 @@ export interface TemplateDefinition {
   configurationUrl: string;
   content: Record<string, unknown>;
 }
+
+export interface CustomCardDefinition {
+  id: string;
+  icon: string;
+  tooltip: string;
+  contentUrl: string;
+  toolbarOperations: { id: string, label: string, icon: string }[],
+}
+
+export interface CardCreateData {
+  x: number,
+  y: number,
+  width: number,
+  height: number,
+  props: CustomCardData | Record<string, string | number | boolean>,
+}
+
+export interface CustomCardData {
+  customCardId: string;
+}
+
+export type CardId = string;
 
 export type ExecutionId = string;
 
@@ -126,6 +154,20 @@ export default interface AbstractWhiteboardsPlugin {
    * @param content
    */
   updateTemplateContent: (content: Record<string, unknown> | null) => Promise<void>;
+
+
+  /**
+   * Register a custom card with its own icon, name, and toolbar operations. The content will be displayed in an iframe.
+   * @param definition
+   */
+  registerCustomCard: (definition: CustomCardDefinition) => Promise<void>;
+
+
+  /**
+   * Create new cards/shapes on whiteboard.
+   * @param cards
+   */
+  createCards: (cards: CardCreateData[]) => Promise<CardId[]>;
 
 
   /**

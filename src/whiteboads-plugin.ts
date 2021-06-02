@@ -8,6 +8,7 @@ import {getPluginBoardData, setPluginBoardData, watchPluginBoardData} from "./pl
 import {registerSidebarTool} from "./plugin-client/plugin-client-sidebar-tools";
 import {hidePluginModal, setPluginModalActionEnabled, showPluginModal} from "./plugin-client/plugin-client-modals";
 import {resizePluginFrame} from "./plugin-client/plugin-client-iframe";
+import {createCards, registerCustomCard} from "./plugin-client/plugin-client-cards";
 
 export default {
   resizePluginFrame,
@@ -31,6 +32,10 @@ export default {
 
   registerTemplate,
   updateTemplateContent,
+
+  registerCustomCard,
+
+  createCards,
 
   pluginToHost,
   onHostToPlugin,

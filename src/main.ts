@@ -1,5 +1,8 @@
 import AbstractWhiteboardsPlugin, {
   CancelCallback,
+  CardId,
+  CardCreateData,
+  CustomCardDefinition,
   ExecutionId,
   HostMessage,
   OauthSite,
@@ -34,6 +37,10 @@ export const {
   registerTemplate,
   updateTemplateContent,
 
+  registerCustomCard,
+
+  createCards,
+
   pluginToHost,
   onHostToPlugin,
   waitForExecution
@@ -41,12 +48,23 @@ export const {
 
 export type {
   AbstractWhiteboardsPlugin,
+
   Viewport,
   ViewportTranslate,
+
   SidebarToolDefinition,
+
   PluginModalDefinition,
+
   OauthSite,
+
   TemplateDefinition,
+
+  CustomCardDefinition,
+
+  CardCreateData,
+  CardId,
+
   HostMessage,
   ExecutionId,
   CancelCallback,
