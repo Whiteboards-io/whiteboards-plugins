@@ -13,6 +13,7 @@ open http://localhost:3000
 ```
 
 Later in the development console at whiteboards.io you can use following URLs to install the development version of a plugin:
+
 - http://localhost:3000/hello-world/
 - http://localhost:3000/jira-integration/
 

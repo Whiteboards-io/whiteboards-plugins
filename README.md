@@ -15,6 +15,7 @@ Production version of plugins are loaded in a sandboxed iframe, with Content Sec
 ### Development
 
 Prerequisites:
+
 - Whiteboards.io organisation account: https://app.whiteboards/signup
 
 In order to develop a plugin you need to setup a project with http server.
@@ -51,18 +52,18 @@ registerTemplate({
   content: {
     cards: {
       _index: {
-        "card1": true
+        card1: true,
       },
       _items: {
-        "card1": {
-            x: 0,
-            y: 0,
-            width: 100,
-            height: 100,
-            text: "Hello world!"
-        }
-      }
-    }
+        card1: {
+          x: 0,
+          y: 0,
+          width: 100,
+          height: 100,
+          text: "Hello world!",
+        },
+      },
+    },
   },
 });
 ```
@@ -75,5 +76,4 @@ Check out the [samples directory](sample-plugins/README.md)
 
 Reach out with feedback and ideas:
 
-* [Create a new issue](https://github.com/Whiteboards-io/whiteboards-plugins/issues)
-
+- [Create a new issue](https://github.com/Whiteboards-io/whiteboards-plugins/issues)

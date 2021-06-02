@@ -1,5 +1,5 @@
-import {v4 as uuidv4} from "uuid";
-import {HostMessage} from "../abstract-whiteboards-plugin";
+import { v4 as uuidv4 } from "uuid";
+import { HostMessage } from "../abstract-whiteboards-plugin";
 
 export function pluginToHost(action: string, payload: unknown = undefined): string {
   const executionId = uuidv4();
@@ -51,7 +51,7 @@ export async function waitForExecution<T>(executionId: string, executionTimeout:
   });
 
   try {
-    return await result as T;
+    return (await result) as T;
   } finally {
     if (cancel) {
       cancel();

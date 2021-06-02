@@ -3,29 +3,29 @@ export interface Viewport {
   rectX: number;
   rectY: number;
   rectMaxX: number;
-  rectMaxY: number
+  rectMaxY: number;
 }
 
 export interface ViewportTranslate {
   recommendedZoom: number;
   translate: [number, number];
-  animationDuration: number
+  animationDuration: number;
 }
 
 export interface SidebarToolDefinition {
-  id: string,
-  icon: string,
-  tooltip: string,
-  contentUrl: string,
+  id: string;
+  icon: string;
+  tooltip: string;
+  contentUrl: string;
 }
 
 export interface PluginModalDefinition {
   title: string;
   contentUrl: string;
   actions: {
-    text: string,
-    actionId: string,
-  }[]
+    text: string;
+    actionId: string;
+  }[];
 }
 
 export interface OauthSite {
@@ -51,15 +51,15 @@ export interface CustomCardDefinition {
   icon: string;
   tooltip: string;
   contentUrl: string;
-  toolbarOperations: { id: string, label: string, icon: string }[],
+  toolbarOperations: { id: string; label: string; icon: string }[];
 }
 
 export interface CardCreateData {
-  x: number,
-  y: number,
-  width: number,
-  height: number,
-  props: CustomCardData | Record<string, string | number | boolean>,
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+  props: CustomCardData | Record<string, string | number | boolean>;
 }
 
 export interface CustomCardData {
@@ -79,75 +79,71 @@ export interface HostMessage<T> {
 export type CancelCallback = () => void;
 
 export default interface AbstractWhiteboardsPlugin {
-  resizePluginFrame: (width: string, height: string) => Promise<void>,
+  resizePluginFrame: (width: string, height: string) => Promise<void>;
 
   /**
    * Get current viewport coords, and zoom
    */
-  getViewport: () => Promise<Viewport>,
+  getViewport: () => Promise<Viewport>;
 
   /**
    * Set current viewport (instantly)
    * @param viewport
    */
-  setViewport: (viewport: Viewport) => Promise<void>,
+  setViewport: (viewport: Viewport) => Promise<void>;
 
   /**
    * Animate current viewport to desired location
    * @param viewportTranslate
    */
-  viewportTranslate: (viewportTranslate: ViewportTranslate) => Promise<void>,
-
+  viewportTranslate: (viewportTranslate: ViewportTranslate) => Promise<void>;
 
   /**
    * Register a new sidebar tool, it will display the icon, and the content once clicked.
    * @param definition
    */
-  registerSidebarTool: (definition: SidebarToolDefinition) => Promise<void>,
-
+  registerSidebarTool: (definition: SidebarToolDefinition) => Promise<void>;
 
   /**
    * Open a modal dialog accordingly to the definition.
    * @param definition
    */
-  showPluginModal: (definition: PluginModalDefinition) => Promise<void>,
+  showPluginModal: (definition: PluginModalDefinition) => Promise<void>;
 
   /**
    * Hide currently opened modal that belongs to your plugin.
    */
-  hidePluginModal: () => Promise<void>,
+  hidePluginModal: () => Promise<void>;
 
   /**
    * Enable or disable one of buttons on currently open modal dialog, which belongs to your plugin.
    * @param actionId
    * @param isEnabled
    */
-  setPluginModalActionEnabled: (actionId: string, isEnabled: boolean) => Promise<void>,
+  setPluginModalActionEnabled: (actionId: string, isEnabled: boolean) => Promise<void>;
 
   /**
    * Listen on plugin modal action events.
    * @param callback
    */
-  onPluginModalAction: (callback: ({actionId}: { actionId: string }) => void) => CancelCallback,
-
+  onPluginModalAction: (callback: ({ actionId }: { actionId: string }) => void) => CancelCallback;
 
   /**
    * Get plugin data which is associated with the current board
    */
-  getPluginBoardData: <T> () => Promise<T>,
+  getPluginBoardData: <T>() => Promise<T>;
 
   /**
    * Set plugin data which is associated with the current board
    * @param pluginData
    */
-  setPluginBoardData: <T>(pluginData: T) => Promise<void>,
+  setPluginBoardData: <T>(pluginData: T) => Promise<void>;
 
   /**
    * Observe plugin data changes, receive the current state, and then wait for real time updates.
    * @param callback
    */
-  watchPluginBoardData: <T>(callback: (pluginData: T) => void) => CancelCallback
-
+  watchPluginBoardData: <T>(callback: (pluginData: T) => void) => CancelCallback;
 
   /**
    * Register a template
@@ -161,7 +157,6 @@ export default interface AbstractWhiteboardsPlugin {
    */
   updateTemplateContent: (content: Record<string, unknown> | null) => Promise<void>;
 
-
   /**
    * Register a custom card with its own icon, name, and toolbar operations. The content will be displayed in an iframe.
    * @param definition
@@ -171,20 +166,18 @@ export default interface AbstractWhiteboardsPlugin {
   /**
    * Listen on custom card toolbar click events.
    */
-  onCustomCardToolbarClick: (callback: ({cardId}: { cardId: CardId }) => void) => CancelCallback,
+  onCustomCardToolbarClick: (callback: ({ cardId }: { cardId: CardId }) => void) => CancelCallback;
 
   /**
    * Listen on plugin toolbox click events.
    */
-  onPluginToolboxClick: (callback: ({customCardId}: { customCardId: string }) => void) => CancelCallback,
-
+  onPluginToolboxClick: (callback: ({ customCardId }: { customCardId: string }) => void) => CancelCallback;
 
   /**
    * Create new cards/shapes on whiteboard.
    * @param cards
    */
   createCards: (cards: CardCreateData[]) => Promise<CardId[]>;
-
 
   /**
    * Get connected Jira sites
@@ -201,14 +194,13 @@ export default interface AbstractWhiteboardsPlugin {
    * @param body
    */
 
-  oauthApiRequest: <T> (
+  oauthApiRequest: <T>(
     siteId: string | undefined | null,
     path: string,
     params?: Record<string, unknown>,
     method?: string,
-    body?: Record<string, unknown>,
+    body?: Record<string, unknown>
   ) => Promise<T>;
-
 
   /**
    * Low level API for communication with the host app
@@ -223,7 +215,7 @@ export default interface AbstractWhiteboardsPlugin {
    *
    * @param callback
    */
-  onHostToPlugin: <T> (callback: (message: HostMessage<T>) => void) => CancelCallback;
+  onHostToPlugin: <T>(callback: (message: HostMessage<T>) => void) => CancelCallback;
 
   /**
    * Wait for result of an execution.
@@ -231,5 +223,5 @@ export default interface AbstractWhiteboardsPlugin {
    * @param executionId
    * @param executionTimeout
    */
-  waitForExecution: <T> (executionId: ExecutionId, executionTimeout?: number | null) => Promise<T>;
+  waitForExecution: <T>(executionId: ExecutionId, executionTimeout?: number | null) => Promise<T>;
 }

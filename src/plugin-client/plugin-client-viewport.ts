@@ -1,8 +1,8 @@
 import { pluginToHost, waitForExecution } from "./index";
-import {Viewport, ViewportTranslate} from "../abstract-whiteboards-plugin";
+import { Viewport, ViewportTranslate } from "../abstract-whiteboards-plugin";
 
 export async function getViewport(): Promise<Viewport> {
-  return await waitForExecution(pluginToHost("getViewport")) as Viewport;
+  return (await waitForExecution(pluginToHost("getViewport"))) as Viewport;
 }
 
 export async function setViewport(viewport: Viewport): Promise<void> {

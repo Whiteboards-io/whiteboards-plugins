@@ -1,23 +1,23 @@
 import AbstractWhiteboardsPlugin from "./abstract-whiteboards-plugin";
 
-import {getJiraSites, oauthApiRequest} from "./plugin-client/plugin-client-oauth";
-import {registerTemplate, updateTemplateContent} from "./plugin-client/plugin-client-templates";
-import {onHostToPlugin, pluginToHost, waitForExecution} from "./plugin-client";
-import {getViewport, setViewport, viewportTranslate} from "./plugin-client/plugin-client-viewport";
-import {getPluginBoardData, setPluginBoardData, watchPluginBoardData} from "./plugin-client/plugin-client-board-data";
-import {registerSidebarTool} from "./plugin-client/plugin-client-sidebar-tools";
+import { getJiraSites, oauthApiRequest } from "./plugin-client/plugin-client-oauth";
+import { registerTemplate, updateTemplateContent } from "./plugin-client/plugin-client-templates";
+import { onHostToPlugin, pluginToHost, waitForExecution } from "./plugin-client";
+import { getViewport, setViewport, viewportTranslate } from "./plugin-client/plugin-client-viewport";
+import { getPluginBoardData, setPluginBoardData, watchPluginBoardData } from "./plugin-client/plugin-client-board-data";
+import { registerSidebarTool } from "./plugin-client/plugin-client-sidebar-tools";
 import {
   hidePluginModal,
   onPluginModalAction,
   setPluginModalActionEnabled,
-  showPluginModal
+  showPluginModal,
 } from "./plugin-client/plugin-client-modals";
-import {resizePluginFrame} from "./plugin-client/plugin-client-iframe";
+import { resizePluginFrame } from "./plugin-client/plugin-client-iframe";
 import {
   createCards,
   onCustomCardToolbarClick,
   onPluginToolboxClick,
-  registerCustomCard
+  registerCustomCard,
 } from "./plugin-client/plugin-client-cards";
 
 export default {
@@ -52,12 +52,11 @@ export default {
 
   pluginToHost,
   onHostToPlugin,
-  waitForExecution
+  waitForExecution,
 } as AbstractWhiteboardsPlugin;
 
 onHostToPlugin((message) => {
   if (message.action === "Ping") {
-    pluginToHost("Pong")
+    pluginToHost("Pong");
   }
-})
-
+});

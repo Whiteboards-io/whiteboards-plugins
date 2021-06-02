@@ -10,7 +10,7 @@ import AbstractWhiteboardsPlugin, {
   SidebarToolDefinition,
   TemplateDefinition,
   Viewport,
-  ViewportTranslate
+  ViewportTranslate,
 } from "./abstract-whiteboards-plugin";
 import WhiteboardsPlugin from "./whiteboads-plugin";
 
@@ -46,28 +46,20 @@ export const {
 
   pluginToHost,
   onHostToPlugin,
-  waitForExecution
+  waitForExecution,
 } = WhiteboardsPlugin;
 
 export type {
   AbstractWhiteboardsPlugin,
-
   Viewport,
   ViewportTranslate,
-
   SidebarToolDefinition,
-
   PluginModalDefinition,
-
   OauthSite,
-
   TemplateDefinition,
-
   CustomCardDefinition,
-
   CardCreateData,
   CardId,
-
   HostMessage,
   ExecutionId,
   CancelCallback,

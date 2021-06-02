@@ -1,5 +1,5 @@
-import {onHostToPlugin, pluginToHost, waitForExecution} from "./index";
-import {CancelCallback, HostMessage} from "../abstract-whiteboards-plugin";
+import { onHostToPlugin, pluginToHost, waitForExecution } from "./index";
+import { CancelCallback, HostMessage } from "../abstract-whiteboards-plugin";
 
 export async function getPluginBoardData<T>(): Promise<T> {
   return (await waitForExecution(pluginToHost("getPluginBoardData"))) as T;
@@ -20,6 +20,6 @@ export function watchPluginBoardData<T>(callback: (pluginData: T) => void): Canc
 
   return () => {
     cancel();
-    pluginToHost("cancelPluginBoardDataWatch", {executionId});
+    pluginToHost("cancelPluginBoardDataWatch", { executionId });
   };
 }
