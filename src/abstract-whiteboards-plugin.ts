@@ -70,9 +70,9 @@ export type CardId = string;
 
 export type ExecutionId = string;
 
-export interface HostMessage {
+export interface HostMessage<T> {
   action: string;
-  payload: unknown;
+  payload: T;
   executionId: ExecutionId;
 }
 
@@ -124,6 +124,12 @@ export default interface AbstractWhiteboardsPlugin {
    */
   setPluginModalActionEnabled: (actionId: string, isEnabled: boolean) => Promise<void>,
 
+  /**
+   * Listen on plugin modal action events.
+   * @param callback
+   */
+  onPluginModalAction: (callback: ({actionId}: { actionId: string }) => void) => CancelCallback,
+
 
   /**
    * Get plugin data which is associated with the current board
@@ -161,6 +167,16 @@ export default interface AbstractWhiteboardsPlugin {
    * @param definition
    */
   registerCustomCard: (definition: CustomCardDefinition) => Promise<void>;
+
+  /**
+   * Listen on custom card toolbar click events.
+   */
+  onCustomCardToolbarClick: (callback: ({cardId}: { cardId: CardId }) => void) => CancelCallback,
+
+  /**
+   * Listen on plugin toolbox click events.
+   */
+  onPluginToolboxClick: (callback: ({customCardId}: { customCardId: string }) => void) => CancelCallback,
 
 
   /**
@@ -207,7 +223,7 @@ export default interface AbstractWhiteboardsPlugin {
    *
    * @param callback
    */
-  onHostToPlugin: (callback: (message: HostMessage) => void) => () => void;
+  onHostToPlugin: <T> (callback: (message: HostMessage<T>) => void) => CancelCallback;
 
   /**
    * Wait for result of an execution.

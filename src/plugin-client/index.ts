@@ -16,7 +16,7 @@ export function pluginToHost(action: string, payload: unknown = undefined): stri
   return executionId;
 }
 
-export function onHostToPlugin(callback: (message: HostMessage) => void): () => void {
+export function onHostToPlugin<T>(callback: (message: HostMessage<T>) => void): () => void {
   const listener = (event: MessageEvent) => {
     try {
       const message = JSON.parse(event.data);

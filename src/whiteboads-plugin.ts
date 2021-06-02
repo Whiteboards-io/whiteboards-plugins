@@ -6,9 +6,19 @@ import {onHostToPlugin, pluginToHost, waitForExecution} from "./plugin-client";
 import {getViewport, setViewport, viewportTranslate} from "./plugin-client/plugin-client-viewport";
 import {getPluginBoardData, setPluginBoardData, watchPluginBoardData} from "./plugin-client/plugin-client-board-data";
 import {registerSidebarTool} from "./plugin-client/plugin-client-sidebar-tools";
-import {hidePluginModal, setPluginModalActionEnabled, showPluginModal} from "./plugin-client/plugin-client-modals";
+import {
+  hidePluginModal,
+  onPluginModalAction,
+  setPluginModalActionEnabled,
+  showPluginModal
+} from "./plugin-client/plugin-client-modals";
 import {resizePluginFrame} from "./plugin-client/plugin-client-iframe";
-import {createCards, registerCustomCard} from "./plugin-client/plugin-client-cards";
+import {
+  createCards,
+  onCustomCardToolbarClick,
+  onPluginToolboxClick,
+  registerCustomCard
+} from "./plugin-client/plugin-client-cards";
 
 export default {
   resizePluginFrame,
@@ -22,6 +32,7 @@ export default {
   showPluginModal,
   hidePluginModal,
   setPluginModalActionEnabled,
+  onPluginModalAction,
 
   getPluginBoardData,
   setPluginBoardData,
@@ -34,6 +45,8 @@ export default {
   updateTemplateContent,
 
   registerCustomCard,
+  onCustomCardToolbarClick,
+  onPluginToolboxClick,
 
   createCards,
 

@@ -26,6 +26,7 @@ export const {
   showPluginModal,
   hidePluginModal,
   setPluginModalActionEnabled,
+  onPluginModalAction,
 
   getPluginBoardData,
   setPluginBoardData,
@@ -38,6 +39,8 @@ export const {
   updateTemplateContent,
 
   registerCustomCard,
+  onCustomCardToolbarClick,
+  onPluginToolboxClick,
 
   createCards,
 

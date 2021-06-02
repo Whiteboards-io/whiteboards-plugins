@@ -12,9 +12,9 @@ export async function setPluginBoardData<T>(pluginData: T): Promise<void> {
 export function watchPluginBoardData<T>(callback: (pluginData: T) => void): CancelCallback {
   const executionId = pluginToHost("watchPluginBoardData");
 
-  const cancel = onHostToPlugin((message: HostMessage) => {
+  const cancel = onHostToPlugin<T>((message: HostMessage<T>) => {
     if (message.executionId === executionId) {
-      callback(message.payload as T);
+      callback(message.payload);
     }
   });
 
