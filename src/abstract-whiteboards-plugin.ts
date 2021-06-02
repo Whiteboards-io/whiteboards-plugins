@@ -6,6 +6,13 @@ export interface ViewportTranslate {
   recommendedZoom: number; translate: [number, number]; animationDuration: number
 }
 
+export interface SidebarToolDefinition {
+  id: string,
+  icon: string,
+  tooltip: string,
+  contentUrl: string,
+}
+
 export interface OauthSite {
   url: string;
   id: string;
@@ -51,6 +58,13 @@ export default interface AbstractWhiteboardsPlugin {
    * @param viewportTranslate
    */
   viewportTranslate: (viewportTranslate: ViewportTranslate) => Promise<void>,
+
+
+  /**
+   * Register a new sidebar tool, it will display the icon, and the content once clicked.
+   * @param definition
+   */
+  registerSidebarTool: (definition: SidebarToolDefinition) => Promise<void>,
 
 
   /**

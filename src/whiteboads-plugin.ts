@@ -5,11 +5,14 @@ import {registerTemplate, updateTemplateContent} from "./plugin-client/plugin-cl
 import {onHostToPlugin, pluginToHost, waitForExecution} from "./plugin-client";
 import {getViewport, setViewport, viewportTranslate} from "./plugin-client/plugin-client-viewport";
 import {getPluginBoardData, setPluginBoardData, watchPluginBoardData} from "./plugin-client/plugin-client-board-data";
+import {registerSidebarTool} from "./plugin-client/plugin-client-sidebar-tools";
 
 export default {
   getViewport,
   setViewport,
   viewportTranslate,
+
+  registerSidebarTool,
 
   getPluginBoardData,
   setPluginBoardData,

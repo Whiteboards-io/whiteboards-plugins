@@ -3,6 +3,7 @@ import AbstractWhiteboardsPlugin, {
   ExecutionId,
   HostMessage,
   OauthSite,
+  SidebarToolDefinition,
   TemplateDefinition,
   Viewport,
   ViewportTranslate
@@ -13,6 +14,8 @@ export const {
   getViewport,
   setViewport,
   viewportTranslate,
+
+  registerSidebarTool,
 
   getPluginBoardData,
   setPluginBoardData,
@@ -33,6 +36,7 @@ export type {
   AbstractWhiteboardsPlugin,
   Viewport,
   ViewportTranslate,
+  SidebarToolDefinition,
   OauthSite,
   TemplateDefinition,
   HostMessage,
