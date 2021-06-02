@@ -7,8 +7,11 @@ import {getViewport, setViewport, viewportTranslate} from "./plugin-client/plugi
 import {getPluginBoardData, setPluginBoardData, watchPluginBoardData} from "./plugin-client/plugin-client-board-data";
 import {registerSidebarTool} from "./plugin-client/plugin-client-sidebar-tools";
 import {hidePluginModal, setPluginModalActionEnabled, showPluginModal} from "./plugin-client/plugin-client-modals";
+import {resizePluginFrame} from "./plugin-client/plugin-client-iframe";
 
 export default {
+  resizePluginFrame,
+
   getViewport,
   setViewport,
   viewportTranslate,

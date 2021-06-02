@@ -6,7 +6,7 @@ export async function showPluginModal(definition: PluginModalDefinition): Promis
 }
 
 export async function hidePluginModal(): Promise<void> {
-  await waitForExecution(pluginToHost("showPluginModal"));
+  await waitForExecution(pluginToHost("hidePluginModal"));
 }
 
 export async function setPluginModalActionEnabled(actionId: string, isEnabled: boolean): Promise<void> {

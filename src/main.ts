@@ -12,6 +12,8 @@ import AbstractWhiteboardsPlugin, {
 import WhiteboardsPlugin from "./whiteboads-plugin";
 
 export const {
+  resizePluginFrame,
+
   getViewport,
   setViewport,
   viewportTranslate,

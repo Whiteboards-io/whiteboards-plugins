@@ -51,6 +51,8 @@ export interface HostMessage {
 export type CancelCallback = () => void;
 
 export default interface AbstractWhiteboardsPlugin {
+  resizePluginFrame: (width: string, height: string) => Promise<void>,
+
   /**
    * Get current viewport coords, and zoom
    */
