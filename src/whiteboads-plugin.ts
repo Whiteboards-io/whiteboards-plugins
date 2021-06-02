@@ -6,6 +6,7 @@ import {onHostToPlugin, pluginToHost, waitForExecution} from "./plugin-client";
 import {getViewport, setViewport, viewportTranslate} from "./plugin-client/plugin-client-viewport";
 import {getPluginBoardData, setPluginBoardData, watchPluginBoardData} from "./plugin-client/plugin-client-board-data";
 import {registerSidebarTool} from "./plugin-client/plugin-client-sidebar-tools";
+import {hidePluginModal, setPluginModalActionEnabled, showPluginModal} from "./plugin-client/plugin-client-modals";
 
 export default {
   getViewport,
@@ -13,6 +14,10 @@ export default {
   viewportTranslate,
 
   registerSidebarTool,
+
+  showPluginModal,
+  hidePluginModal,
+  setPluginModalActionEnabled,
 
   getPluginBoardData,
   setPluginBoardData,

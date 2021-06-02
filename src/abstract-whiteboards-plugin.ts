@@ -13,6 +13,15 @@ export interface SidebarToolDefinition {
   contentUrl: string,
 }
 
+export interface PluginModalDefinition {
+  title: string;
+  contentUrl: string;
+  actions: {
+    text: string,
+    actionId: string,
+  }[]
+}
+
 export interface OauthSite {
   url: string;
   id: string;
@@ -65,6 +74,25 @@ export default interface AbstractWhiteboardsPlugin {
    * @param definition
    */
   registerSidebarTool: (definition: SidebarToolDefinition) => Promise<void>,
+
+
+  /**
+   * Open a modal dialog accordingly to the definition.
+   * @param definition
+   */
+  showPluginModal: (definition: PluginModalDefinition) => Promise<void>,
+
+  /**
+   * Hide currently opened modal that belongs to your plugin.
+   */
+  hidePluginModal: () => Promise<void>,
+
+  /**
+   * Enable or disable one of buttons on currently open modal dialog, which belongs to your plugin.
+   * @param actionId
+   * @param isEnabled
+   */
+  setPluginModalActionEnabled: (actionId: string, isEnabled: boolean) => Promise<void>,
 
 
   /**

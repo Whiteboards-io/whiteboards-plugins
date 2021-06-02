@@ -3,6 +3,7 @@ import AbstractWhiteboardsPlugin, {
   ExecutionId,
   HostMessage,
   OauthSite,
+  PluginModalDefinition,
   SidebarToolDefinition,
   TemplateDefinition,
   Viewport,
@@ -16,6 +17,10 @@ export const {
   viewportTranslate,
 
   registerSidebarTool,
+
+  showPluginModal,
+  hidePluginModal,
+  setPluginModalActionEnabled,
 
   getPluginBoardData,
   setPluginBoardData,
@@ -37,6 +42,7 @@ export type {
   Viewport,
   ViewportTranslate,
   SidebarToolDefinition,
+  PluginModalDefinition,
   OauthSite,
   TemplateDefinition,
   HostMessage,
