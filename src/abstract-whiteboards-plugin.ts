@@ -67,6 +67,25 @@ export interface CustomCardData {
 }
 
 export type CardId = string;
+export type LineId = string;
+
+export type CardData = {
+  x: number;
+  y: number;
+  z?: number;
+  width: number;
+  height: number;
+  [prop: string]: unknown;
+};
+
+export type LineData = {
+  id: string;
+  start: { x: number; y: number };
+  end: { x: number; y: number };
+  startCardId?: string;
+  endCardId?: string;
+  [prop: string]: unknown;
+};
 
 export type ExecutionId = string;
 
@@ -178,6 +197,72 @@ export default interface AbstractWhiteboardsPlugin {
    * @param cards
    */
   createCards: (cards: CardCreateData[]) => Promise<CardId[]>;
+
+  /**
+   * Get a list of card identifiers, currently present on the whiteboard.
+   */
+  getCardsIndex: () => Promise<CardId[]>;
+
+  /**
+   * Get a list of line identifiers, currently present on the whiteboard.
+   */
+  getLinesIndex: () => Promise<LineId[]>;
+
+  /**
+   * Get data for given cardId.
+   */
+  getCardData: (cardId: CardId) => Promise<CardData | null>;
+
+  /**
+   * Get data for given lineId.
+   */
+  getLineData: (lineId: LineId) => Promise<LineData | null>;
+
+  /**
+   * Update card of given cardId with cardData. This can be a partial update.
+   *
+   * @param cardId
+   * @param cardData
+   */
+  setCardData: (cardId: CardId, cardData: Partial<CardData> | null) => Promise<void>;
+
+  /**
+   * Update line of given lineId with lineData. This can be a partial update.
+   *
+   * @param cardId
+   * @param cardData
+   */
+  setLineData: (lineId: LineId, cardData: Partial<LineData> | null) => Promise<void>;
+
+  /**
+   * Attach a listener to the list of card identifiers. It will be executed whenever a card is added or removed from the board.
+   *
+   * @param callback
+   */
+  watchCardsIndex: (callback: (cardIds: CardId[]) => void) => CancelCallback;
+
+  /**
+   * Attach a listener to the list of line identifiers. It will be executed whenever a line is added or removed from the board.
+   *
+   * @param callback
+   */
+  watchLinesIndex: (callback: (lineIds: LineId[]) => void) => CancelCallback;
+
+  /**
+   * Attach a listener to the given card data. It will be executed whenever any of card properties changes.
+   *
+   * @param cardId
+   * @param callback
+   */
+  watchCardData: (cardId: CardId, callback: (cardData: CardData | null) => void) => CancelCallback;
+
+  /**
+   * Attach a listener to the given line data. It will be executed whenever any of line properties changes.
+   *
+   * @param cardId
+   * @param callback
+   */
+  watchLineData: (lineId: LineId, callback: (lineDAta: LineData | null) => void) => CancelCallback;
 
   /**
    * Get connected Jira sites

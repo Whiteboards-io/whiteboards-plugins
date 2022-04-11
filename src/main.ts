@@ -11,10 +11,23 @@ import AbstractWhiteboardsPlugin, {
   TemplateDefinition,
   Viewport,
   ViewportTranslate,
+  CardData,
+  LineData,
 } from "./abstract-whiteboards-plugin";
 import WhiteboardsPlugin from "./whiteboads-plugin";
 
 export const {
+  getCardData,
+  getCardsIndex,
+  getLineData,
+  getLinesIndex,
+  setCardData,
+  setLineData,
+  watchCardData,
+  watchCardsIndex,
+  watchLineData,
+  watchLinesIndex,
+
   resizePluginFrame,
 
   getViewport,
@@ -63,4 +76,6 @@ export type {
   HostMessage,
   ExecutionId,
   CancelCallback,
+  CardData,
+  LineData,
 };

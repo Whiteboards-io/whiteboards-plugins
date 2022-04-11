@@ -19,8 +19,31 @@ import {
   onPluginToolboxClick,
   registerCustomCard,
 } from "./plugin-client/plugin-client-cards";
+import {
+  getCardData,
+  getCardsIndex,
+  getLineData,
+  getLinesIndex,
+  setCardData,
+  setLineData,
+  watchCardData,
+  watchCardsIndex,
+  watchLineData,
+  watchLinesIndex,
+} from "./plugin-client/plugin-client-board-objects";
 
-export default {
+const WhiteboardsPlugin: AbstractWhiteboardsPlugin = {
+  getCardData,
+  getCardsIndex,
+  getLineData,
+  getLinesIndex,
+  setCardData,
+  setLineData,
+  watchCardData,
+  watchCardsIndex,
+  watchLineData,
+  watchLinesIndex,
+
   resizePluginFrame,
 
   getViewport,
@@ -53,7 +76,9 @@ export default {
   pluginToHost,
   onHostToPlugin,
   waitForExecution,
-} as AbstractWhiteboardsPlugin;
+};
+
+export default WhiteboardsPlugin;
 
 onHostToPlugin((message) => {
   if (message.action === "Ping") {
