@@ -6,6 +6,9 @@ import "./App.css";
 
 import * as HelloWorld from "./hello-world";
 import * as JiraIntegration from "./jira-integration";
+import BoardInspectPluginPage from "./board-inspect";
+import BoardInspectPlugiSidebar from "./board-inspect/plugin-sidebar";
+
 
 function App() {
   return (
@@ -24,6 +27,13 @@ function App() {
         </Route>
         <Route path="/jira-integration/">
           <JiraIntegration.PluginRoot />
+        </Route>
+        {/* Board inspect */}
+        <Route path="/board-inspect/sidebar">
+          <BoardInspectPlugiSidebar />
+        </Route>
+        <Route path="/board-inspect/">
+          <BoardInspectPluginPage />
         </Route>
       </Switch>
     </Router>

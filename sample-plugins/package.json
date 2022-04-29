@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@atlaskit/button": "^16.2.2",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -10,10 +11,12 @@
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "jsoneditor": "^9.7.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "typescript": "^4.1.2",
+    "underscore": "^1.13.2",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
@@ -43,8 +46,10 @@
   "devDependencies": {
     "@atlaskit/select": "^13.3.1",
     "@atlaskit/textfield": "^5.0.1",
+    "@types/jsoneditor": "^9.5.1",
     "@types/react-router-dom": "^5.1.7",
-    "@whiteboards-io/plugins": "^1.2.0",
+    "@types/underscore": "^1.11.4",
+    "@whiteboards-io/plugins": "^1.5.0",
     "react-async-hook": "^3.6.2",
     "react-router-dom": "^5.2.0",
     "serve": "^11.3.2",
