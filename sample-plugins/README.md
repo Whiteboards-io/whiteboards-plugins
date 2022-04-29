@@ -27,3 +27,7 @@ Once the button is clicked - board insertion is enabled.
 
 A template with custom configuration screen. On this screen a user can select Jira site, and specify JQL.
 This configuration will be used to generate content of a board: list of issue carsd, and an import zone.
+
+### Board inspect
+
+Board inspect is a tool added to whiteboard, which allows you to show and modify raw properties of the content: lines and cards.
