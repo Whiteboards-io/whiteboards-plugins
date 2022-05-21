@@ -75,10 +75,15 @@
 				<a href="#development" id="development" style="color: inherit; text-decoration: none;">
 					<h3>Development</h3>
 				</a>
+				<p>Prerequisites:</p>
+				<ul>
+					<li>Whiteboards.io organisation account: <a href="https://app.whiteboards/signup">https://app.whiteboards/signup</a></li>
+				</ul>
 				<p>In order to develop a plugin you need to setup a project with http server.
 				For example using <a href="https://create-react-app.dev/docs/getting-started">Create React App</a> and using <a href="http://localhost:3000">http://localhost:3000</a> url in development console at Whiteboards.io</p>
-				<a href="#deployment" id="deployment" style="color: inherit; text-decoration: none;">
-					<h3>Deployment</h3>
+				<p>Once you have your development environment set up, and a hello world running, go to <a href="https://app.whiteboards/$YOUR_ORGANISATION/developers">https://app.whiteboards/$YOUR_ORGANISATION/developers</a> and follow the instructions.</p>
+				<a href="#production-deployment" id="production-deployment" style="color: inherit; text-decoration: none;">
+					<h3>Production deployment</h3>
 				</a>
 				<p>You can make your Whiteboards.io plugin available for other users. In order to do that your plugin must be packaged in a ZIP file.</p>
 				<p><em>Details on production deployment coming soon!</em></p>
@@ -88,8 +93,8 @@
 				<p>Start from installing the library in your plugin project:</p>
 				<pre><code><span style="color: #001080">npm</span><span style="color: #000000"> </span><span style="color: #001080">install</span><span style="color: #000000"> --</span><span style="color: #001080">save</span><span style="color: #000000">-</span><span style="color: #001080">dev</span><span style="color: #000000"> @</span><span style="color: #001080">whiteboards</span><span style="color: #000000">-</span><span style="color: #001080">io</span><span style="color: #000000">/</span><span style="color: #001080">plugins</span>
 </code></pre>
-				<a href="#example-custom-template" id="example-custom-template" style="color: inherit; text-decoration: none;">
-					<h3>Example: Custom template</h3>
+				<a href="#example-custom-static-template" id="example-custom-static-template" style="color: inherit; text-decoration: none;">
+					<h3>Example: Custom static template</h3>
 				</a>
 				<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">registerTemplate</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;@whiteboards-io/plugins&quot;</span><span style="color: #000000">;</span>
 <span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">helloImage</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;./hello-image.png&quot;</span><span style="color: #000000">;</span>
@@ -103,21 +108,25 @@
 <span style="color: #000000">  </span><span style="color: #001080">content:</span><span style="color: #000000"> {</span>
 <span style="color: #000000">    </span><span style="color: #001080">cards:</span><span style="color: #000000"> {</span>
 <span style="color: #000000">      </span><span style="color: #001080">_index:</span><span style="color: #000000"> {</span>
-<span style="color: #000000">        </span><span style="color: #A31515">&quot;card1&quot;</span><span style="color: #001080">:</span><span style="color: #000000"> </span><span style="color: #0000FF">true</span>
+<span style="color: #000000">        </span><span style="color: #001080">card1:</span><span style="color: #000000"> </span><span style="color: #0000FF">true</span><span style="color: #000000">,</span>
 <span style="color: #000000">      },</span>
 <span style="color: #000000">      </span><span style="color: #001080">_items:</span><span style="color: #000000"> {</span>
-<span style="color: #000000">        </span><span style="color: #A31515">&quot;card1&quot;</span><span style="color: #001080">:</span><span style="color: #000000"> {</span>
-<span style="color: #000000">            </span><span style="color: #001080">x:</span><span style="color: #000000"> </span><span style="color: #098658">0</span><span style="color: #000000">,</span>
-<span style="color: #000000">            </span><span style="color: #001080">y:</span><span style="color: #000000"> </span><span style="color: #098658">0</span><span style="color: #000000">,</span>
-<span style="color: #000000">            </span><span style="color: #001080">width:</span><span style="color: #000000"> </span><span style="color: #098658">100</span><span style="color: #000000">,</span>
-<span style="color: #000000">            </span><span style="color: #001080">height:</span><span style="color: #000000"> </span><span style="color: #098658">100</span><span style="color: #000000">,</span>
-<span style="color: #000000">            </span><span style="color: #001080">text:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;Hello world!&quot;</span>
-<span style="color: #000000">        }</span>
-<span style="color: #000000">      }</span>
-<span style="color: #000000">    }</span>
+<span style="color: #000000">        </span><span style="color: #001080">card1:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">          </span><span style="color: #001080">x:</span><span style="color: #000000"> </span><span style="color: #098658">0</span><span style="color: #000000">,</span>
+<span style="color: #000000">          </span><span style="color: #001080">y:</span><span style="color: #000000"> </span><span style="color: #098658">0</span><span style="color: #000000">,</span>
+<span style="color: #000000">          </span><span style="color: #001080">width:</span><span style="color: #000000"> </span><span style="color: #098658">100</span><span style="color: #000000">,</span>
+<span style="color: #000000">          </span><span style="color: #001080">height:</span><span style="color: #000000"> </span><span style="color: #098658">100</span><span style="color: #000000">,</span>
+<span style="color: #000000">          </span><span style="color: #001080">text:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;Hello world!&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">        },</span>
+<span style="color: #000000">      },</span>
+<span style="color: #000000">    },</span>
 <span style="color: #000000">  },</span>
 <span style="color: #000000">});</span>
 </code></pre>
+				<a href="#more-examples" id="more-examples" style="color: inherit; text-decoration: none;">
+					<h2>More examples</h2>
+				</a>
+				<p>Check out the <a href="sample-plugins/README.md">samples directory</a></p>
 				<a href="#feedback" id="feedback" style="color: inherit; text-decoration: none;">
 					<h2>Feedback</h2>
 				</a>
@@ -137,8 +146,68 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/abstractwhiteboardsplugin.html" class="tsd-kind-icon">Abstract<wbr>Whiteboards<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/cardcreatedata.html" class="tsd-kind-icon">Card<wbr>Create<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/customcarddefinition.html" class="tsd-kind-icon">Custom<wbr>Card<wbr>Definition</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="interfaces/hostmessage.html" class="tsd-kind-icon">Host<wbr>Message</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/oauthsite.html" class="tsd-kind-icon">Oauth<wbr>Site</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/pluginmodaldefinition.html" class="tsd-kind-icon">Plugin<wbr>Modal<wbr>Definition</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/sidebartooldefinition.html" class="tsd-kind-icon">Sidebar<wbr>Tool<wbr>Definition</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/templatedefinition.html" class="tsd-kind-icon">Template<wbr>Definition</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/viewport.html" class="tsd-kind-icon">Viewport</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/viewporttranslate.html" class="tsd-kind-icon">Viewport<wbr>Translate</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#cancelcallback" class="tsd-kind-icon">Cancel<wbr>Callback</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#carddata" class="tsd-kind-icon">Card<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#cardid" class="tsd-kind-icon">Card<wbr>Id</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#executionid" class="tsd-kind-icon">Execution<wbr>Id</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#linedata" class="tsd-kind-icon">Line<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#createcards" class="tsd-kind-icon">create<wbr>Cards</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#getcarddata" class="tsd-kind-icon">get<wbr>Card<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#getcardsindex" class="tsd-kind-icon">get<wbr>Cards<wbr>Index</a>
+					</li>
 					<li class=" tsd-kind-function">
 						<a href="modules.html#getjirasites" class="tsd-kind-icon">get<wbr>Jira<wbr>Sites</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#getlinedata" class="tsd-kind-icon">get<wbr>Line<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#getlinesindex" class="tsd-kind-icon">get<wbr>Lines<wbr>Index</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
 						<a href="modules.html#getpluginboarddata" class="tsd-kind-icon">get<wbr>Plugin<wbr>Board<wbr>Data</a>
@@ -146,23 +215,56 @@
 					<li class=" tsd-kind-function">
 						<a href="modules.html#getviewport" class="tsd-kind-icon">get<wbr>Viewport</a>
 					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#hidepluginmodal" class="tsd-kind-icon">hide<wbr>Plugin<wbr>Modal</a>
+					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
 						<a href="modules.html#oauthapirequest" class="tsd-kind-icon">oauth<wbr>Api<wbr>Request</a>
 					</li>
 					<li class=" tsd-kind-function">
+						<a href="modules.html#oncustomcardtoolbarclick" class="tsd-kind-icon">on<wbr>Custom<wbr>Card<wbr>Toolbar<wbr>Click</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
 						<a href="modules.html#onhosttoplugin" class="tsd-kind-icon">on<wbr>Host<wbr>ToPlugin</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#onpluginmodalaction" class="tsd-kind-icon">on<wbr>Plugin<wbr>Modal<wbr>Action</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#onplugintoolboxclick" class="tsd-kind-icon">on<wbr>Plugin<wbr>Toolbox<wbr>Click</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="modules.html#plugintohost" class="tsd-kind-icon">plugin<wbr>ToHost</a>
 					</li>
 					<li class=" tsd-kind-function">
+						<a href="modules.html#registercustomcard" class="tsd-kind-icon">register<wbr>Custom<wbr>Card</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#registersidebartool" class="tsd-kind-icon">register<wbr>Sidebar<wbr>Tool</a>
+					</li>
+					<li class=" tsd-kind-function">
 						<a href="modules.html#registertemplate" class="tsd-kind-icon">register<wbr>Template</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#resizepluginframe" class="tsd-kind-icon">resize<wbr>Plugin<wbr>Frame</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#setcarddata" class="tsd-kind-icon">set<wbr>Card<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#setlinedata" class="tsd-kind-icon">set<wbr>Line<wbr>Data</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
 						<a href="modules.html#setpluginboarddata" class="tsd-kind-icon">set<wbr>Plugin<wbr>Board<wbr>Data</a>
 					</li>
 					<li class=" tsd-kind-function">
+						<a href="modules.html#setpluginmodalactionenabled" class="tsd-kind-icon">set<wbr>Plugin<wbr>Modal<wbr>Action<wbr>Enabled</a>
+					</li>
+					<li class=" tsd-kind-function">
 						<a href="modules.html#setviewport" class="tsd-kind-icon">set<wbr>Viewport</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#showpluginmodal" class="tsd-kind-icon">show<wbr>Plugin<wbr>Modal</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="modules.html#updatetemplatecontent" class="tsd-kind-icon">update<wbr>Template<wbr>Content</a>
@@ -173,6 +275,21 @@
 					<li class=" tsd-kind-function tsd-has-type-parameter">
 						<a href="modules.html#waitforexecution" class="tsd-kind-icon">wait<wbr>For<wbr>Execution</a>
 					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#watchcarddata" class="tsd-kind-icon">watch<wbr>Card<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#watchcardsindex" class="tsd-kind-icon">watch<wbr>Cards<wbr>Index</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#watchlinedata" class="tsd-kind-icon">watch<wbr>Line<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#watchlinesindex" class="tsd-kind-icon">watch<wbr>Lines<wbr>Index</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="modules.html#watchpluginboarddata" class="tsd-kind-icon">watch<wbr>Plugin<wbr>Board<wbr>Data</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
@@ -182,6 +299,9 @@
 	<div class="container">
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+			</ul>
 		</div>
 	</div>
 </footer>
