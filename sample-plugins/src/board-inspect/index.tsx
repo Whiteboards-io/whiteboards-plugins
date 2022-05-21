@@ -10,7 +10,7 @@ export default function PluginRoot() {
       id: "board-inspect",
       icon: window.location.origin + icon,
       tooltip: "Board inspect",
-      contentUrl: window.location.origin + window.location.pathname + "sidebar",
+      contentUrl: window.location.origin + window.location.pathname + "?sidebar",
     });
   }, []);
 
