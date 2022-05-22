@@ -45,6 +45,10 @@ export const {
   setPluginBoardData,
   watchPluginBoardData,
 
+  getPluginBoardUserData,
+  setPluginBoardUserData,
+  watchPluginBoardUserData,
+
   getJiraSites,
   oauthApiRequest,
 

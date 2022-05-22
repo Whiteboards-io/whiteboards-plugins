@@ -165,6 +165,23 @@ export default interface AbstractWhiteboardsPlugin {
   watchPluginBoardData: <T>(callback: (pluginData: T) => void) => CancelCallback;
 
   /**
+   * Get plugin data which is associated with the current board and the current user
+   */
+  getPluginBoardUserData: <T>() => Promise<T>;
+
+  /**
+   * Set plugin data which is associated with the current board and the current user
+   * @param pluginData
+   */
+  setPluginBoardUserData: <T>(pluginData: T) => Promise<void>;
+
+  /**
+   * Observe plugin board data associated with the current user, receive the current state, and then wait for real time updates.
+   * @param callback
+   */
+  watchPluginBoardUserData: <T>(callback: (pluginData: T) => void) => CancelCallback;
+
+  /**
    * Register a template
    * @param definition
    */

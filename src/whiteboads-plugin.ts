@@ -31,6 +31,11 @@ import {
   watchLineData,
   watchLinesIndex,
 } from "./plugin-client/plugin-client-board-objects";
+import {
+  getPluginBoardUserData,
+  setPluginBoardUserData,
+  watchPluginBoardUserData,
+} from "./plugin-client/plugin-client-board-user-data";
 
 const WhiteboardsPlugin: AbstractWhiteboardsPlugin = {
   getCardData,
@@ -60,6 +65,10 @@ const WhiteboardsPlugin: AbstractWhiteboardsPlugin = {
   getPluginBoardData,
   setPluginBoardData,
   watchPluginBoardData,
+
+  getPluginBoardUserData,
+  setPluginBoardUserData,
+  watchPluginBoardUserData,
 
   getJiraSites,
   oauthApiRequest,

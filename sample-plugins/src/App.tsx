@@ -29,13 +29,12 @@ function App() {
       return null;
     }
   } else if (plugin === "board-inspect") {
-    switch (page) {
-      case "sidebar":
-        return <BoardInspectPlugiSidebar />;
-      case null:
-        return <BoardInspectPluginPage />;
-      default:
-        return null;
+    if (page === "sidebar") {
+      return <BoardInspectPlugiSidebar />;
+    } else if (page === null) {
+      return <BoardInspectPluginPage />;
+    } else {
+      return null;
     }
   } else {
     return null;
