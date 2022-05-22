@@ -11,7 +11,7 @@ export function PluginRoot() {
       id: "hello-world-template",
       title: "Hello World",
       description: "This is an example plugin with configuration screen",
-      illustration: window.location.origin + logo,
+      illustration: window.location.origin + window.location.pathname + logo,
       configurationUrl: window.location.origin + window.location.pathname + "?plugin=hello-world&page=template-config",
       content: {},
     });

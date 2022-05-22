@@ -16,7 +16,7 @@ export function PluginRoot() {
       id: "jira-integration-template",
       title: "Jira integration",
       description: "This is an example plugin with configuration screen that integrates with Jira",
-      illustration: window.location.origin + logo,
+      illustration: window.location.origin + window.location.pathname + logo,
       configurationUrl:
         window.location.origin + window.location.pathname + "?plugin=jira-integration&page=template-config",
       content: {},
