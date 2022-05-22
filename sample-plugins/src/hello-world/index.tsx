@@ -12,7 +12,7 @@ export function PluginRoot() {
       title: "Hello World",
       description: "This is an example plugin with configuration screen",
       illustration: window.location.origin + logo,
-      configurationUrl: window.location.origin + window.location.pathname + "?template-config",
+      configurationUrl: window.location.origin + window.location.pathname + "?plugin=hello-world&page=template-config",
       content: {},
     });
   }, []);

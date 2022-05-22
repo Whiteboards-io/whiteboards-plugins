@@ -1,7 +1,5 @@
 import React from "react";
 
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
 import "./App.css";
 
 import * as HelloWorld from "./hello-world";
@@ -10,33 +8,38 @@ import BoardInspectPluginPage from "./board-inspect";
 import BoardInspectPlugiSidebar from "./board-inspect/plugin-sidebar";
 
 function App() {
-  return (
-    <Router>
-      <Switch>
-        {/* Hello world */}
-        <Route path="/hello-world/?template-config">
-          <HelloWorld.TemplateConfig />
-        </Route>
-        <Route path="/hello-world/">
-          <HelloWorld.PluginRoot />
-        </Route>
-        {/* Jira integration */}
-        <Route path="/jira-integration/?template-config">
-          <JiraIntegration.TemplateConfig />
-        </Route>
-        <Route path="/jira-integration/">
-          <JiraIntegration.PluginRoot />
-        </Route>
-        {/* Board inspect */}
-        <Route path="/board-inspect/?sidebar">
-          <BoardInspectPlugiSidebar />
-        </Route>
-        <Route path="/board-inspect/">
-          <BoardInspectPluginPage />
-        </Route>
-      </Switch>
-    </Router>
-  );
+  const searchParams = new URLSearchParams(window.location.search);
+  const plugin = searchParams.get("plugin");
+  const page = searchParams.get("page");
+
+  if (plugin === "hello-world") {
+    if (page === "template-config") {
+      return <HelloWorld.TemplateConfig />;
+    } else if (page === null) {
+      return <HelloWorld.PluginRoot />;
+    } else {
+      return null;
+    }
+  } else if (plugin === "jira-integration") {
+    if (page === "template-config") {
+      return <JiraIntegration.TemplateConfig />;
+    } else if (page === null) {
+      return <JiraIntegration.PluginRoot />;
+    } else {
+      return null;
+    }
+  } else if (plugin === "board-inspect") {
+    switch (page) {
+      case "sidebar":
+        return <BoardInspectPlugiSidebar />;
+      case null:
+        return <BoardInspectPluginPage />;
+      default:
+        return null;
+    }
+  } else {
+    return null;
+  }
 }
 
 export default App;
