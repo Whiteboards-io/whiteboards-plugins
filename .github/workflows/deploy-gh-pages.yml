@@ -25,10 +25,7 @@ jobs:
     - run: cd sample-plugins && npm install && cd ..
     - run: yarn docs
     - run: cd sample-plugins && npm run build && cd ..
-    - run: mkdir docs/sample-plugins
-    - run: cp -r sample-plugins/build docs/sample-plugins/board-inspect/
-    - run: cp -r sample-plugins/build docs/sample-plugins/hello-world/
-    - run: cp -r sample-plugins/build docs/sample-plugins/jira-integration/
+    - run: cp -r sample-plugins/build docs/sample-plugins/
 
     - run: touch docs/.nojekyll
     - name: Deploy docs 🚀
