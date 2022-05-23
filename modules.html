@@ -72,6 +72,7 @@
 								<li class="tsd-kind-interface"><a href="interfaces/pluginmodaldefinition.html" class="tsd-kind-icon">Plugin<wbr>Modal<wbr>Definition</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/sidebartooldefinition.html" class="tsd-kind-icon">Sidebar<wbr>Tool<wbr>Definition</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/templatedefinition.html" class="tsd-kind-icon">Template<wbr>Definition</a></li>
+								<li class="tsd-kind-interface"><a href="interfaces/userdata.html" class="tsd-kind-icon">User<wbr>Data</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/viewport.html" class="tsd-kind-icon">Viewport</a></li>
 								<li class="tsd-kind-interface"><a href="interfaces/viewporttranslate.html" class="tsd-kind-icon">Viewport<wbr>Translate</a></li>
 							</ul>
@@ -90,8 +91,10 @@
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function"><a href="modules.html#createcards" class="tsd-kind-icon">create<wbr>Cards</a></li>
+								<li class="tsd-kind-function"><a href="modules.html#getboardusers" class="tsd-kind-icon">get<wbr>Board<wbr>Users</a></li>
 								<li class="tsd-kind-function"><a href="modules.html#getcarddata" class="tsd-kind-icon">get<wbr>Card<wbr>Data</a></li>
 								<li class="tsd-kind-function"><a href="modules.html#getcardsindex" class="tsd-kind-icon">get<wbr>Cards<wbr>Index</a></li>
+								<li class="tsd-kind-function"><a href="modules.html#getcurrentboarduser" class="tsd-kind-icon">get<wbr>Current<wbr>Board<wbr>User</a></li>
 								<li class="tsd-kind-function"><a href="modules.html#getjirasites" class="tsd-kind-icon">get<wbr>Jira<wbr>Sites</a></li>
 								<li class="tsd-kind-function"><a href="modules.html#getlinedata" class="tsd-kind-icon">get<wbr>Line<wbr>Data</a></li>
 								<li class="tsd-kind-function"><a href="modules.html#getlinesindex" class="tsd-kind-icon">get<wbr>Lines<wbr>Index</a></li>
@@ -119,6 +122,7 @@
 								<li class="tsd-kind-function"><a href="modules.html#updatetemplatecontent" class="tsd-kind-icon">update<wbr>Template<wbr>Content</a></li>
 								<li class="tsd-kind-function"><a href="modules.html#viewporttranslate" class="tsd-kind-icon">viewport<wbr>Translate</a></li>
 								<li class="tsd-kind-function tsd-has-type-parameter"><a href="modules.html#waitforexecution" class="tsd-kind-icon">wait<wbr>For<wbr>Execution</a></li>
+								<li class="tsd-kind-function"><a href="modules.html#watchboardusers" class="tsd-kind-icon">watch<wbr>Board<wbr>Users</a></li>
 								<li class="tsd-kind-function"><a href="modules.html#watchcarddata" class="tsd-kind-icon">watch<wbr>Card<wbr>Data</a></li>
 								<li class="tsd-kind-function"><a href="modules.html#watchcardsindex" class="tsd-kind-icon">watch<wbr>Cards<wbr>Index</a></li>
 								<li class="tsd-kind-function"><a href="modules.html#watchlinedata" class="tsd-kind-icon">watch<wbr>Line<wbr>Data</a></li>
@@ -138,7 +142,7 @@
 					<div class="tsd-signature tsd-kind-icon">Cancel<wbr>Callback<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/fe3d4ce/src/abstract-whiteboards-plugin.ts#L98">abstract-whiteboards-plugin.ts:98</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L104">abstract-whiteboards-plugin.ts:104</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -163,7 +167,7 @@
 					<div class="tsd-signature tsd-kind-icon">Card<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>z<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/fe3d4ce/src/abstract-whiteboards-plugin.ts#L72">abstract-whiteboards-plugin.ts:72</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L78">abstract-whiteboards-plugin.ts:78</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -196,7 +200,7 @@
 					<div class="tsd-signature tsd-kind-icon">Card<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/fe3d4ce/src/abstract-whiteboards-plugin.ts#L69">abstract-whiteboards-plugin.ts:69</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L75">abstract-whiteboards-plugin.ts:75</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -206,7 +210,7 @@
 					<div class="tsd-signature tsd-kind-icon">Execution<wbr>Id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/fe3d4ce/src/abstract-whiteboards-plugin.ts#L90">abstract-whiteboards-plugin.ts:90</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L96">abstract-whiteboards-plugin.ts:96</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -216,7 +220,7 @@
 					<div class="tsd-signature tsd-kind-icon">Line<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>end<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>endCardId<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>start<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">; </span>startCardId<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/fe3d4ce/src/abstract-whiteboards-plugin.ts#L81">abstract-whiteboards-plugin.ts:81</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L87">abstract-whiteboards-plugin.ts:87</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -272,7 +276,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/fe3d4ce/src/abstract-whiteboards-plugin.ts#L216">abstract-whiteboards-plugin.ts:216</a></li>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L237">abstract-whiteboards-plugin.ts:237</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -286,6 +290,23 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="getboardusers" class="tsd-anchor"></a>
+					<h3>get<wbr>Board<wbr>Users</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Board<wbr>Users<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/userdata.html" class="tsd-signature-type" data-tsd-kind="Interface">UserData</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L117">abstract-whiteboards-plugin.ts:117</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/userdata.html" class="tsd-signature-type" data-tsd-kind="Interface">UserData</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
 					<a name="getcarddata" class="tsd-anchor"></a>
 					<h3>get<wbr>Card<wbr>Data</h3>
 					<ul class="tsd-signatures tsd-kind-function">
@@ -295,7 +316,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/fe3d4ce/src/abstract-whiteboards-plugin.ts#L231">abstract-whiteboards-plugin.ts:231</a></li>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L252">abstract-whiteboards-plugin.ts:252</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -318,10 +339,27 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/fe3d4ce/src/abstract-whiteboards-plugin.ts#L221">abstract-whiteboards-plugin.ts:221</a></li>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L242">abstract-whiteboards-plugin.ts:242</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="getcurrentboarduser" class="tsd-anchor"></a>
+					<h3>get<wbr>Current<wbr>Board<wbr>User</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Current<wbr>Board<wbr>User<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/userdata.html" class="tsd-signature-type" data-tsd-kind="Interface">UserData</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L112">abstract-whiteboards-plugin.ts:112</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/userdata.html" class="tsd-signature-type" data-tsd-kind="Interface">UserData</a><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -335,7 +373,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/fe3d4ce/src/abstract-whiteboards-plugin.ts#L287">abstract-whiteboards-plugin.ts:287</a></li>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L308">abstract-whiteboards-plugin.ts:308</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/oauthsite.html" class="tsd-signature-type" data-tsd-kind="Interface">OauthSite</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -352,7 +390,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/fe3d4ce/src/abstract-whiteboards-plugin.ts#L236">abstract-whiteboards-plugin.ts:236</a></li>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L257">abstract-whiteboards-plugin.ts:257</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -375,7 +413,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/fe3d4ce/src/abstract-whiteboards-plugin.ts#L226">abstract-whiteboards-plugin.ts:226</a></li>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L247">abstract-whiteboards-plugin.ts:247</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -392,7 +430,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/fe3d4ce/src/abstract-whiteboards-plugin.ts#L153">abstract-whiteboards-plugin.ts:153</a></li>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L174">abstract-whiteboards-plugin.ts:174</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -415,7 +453,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/fe3d4ce/src/abstract-whiteboards-plugin.ts#L170">abstract-whiteboards-plugin.ts:170</a></li>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L191">abstract-whiteboards-plugin.ts:191</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -438,7 +476,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/fe3d4ce/src/abstract-whiteboards-plugin.ts#L106">abstract-whiteboards-plugin.ts:106</a></li>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L127">abstract-whiteboards-plugin.ts:127</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/viewport.html" class="tsd-signature-type" data-tsd-kind="Interface">Viewport</a><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -455,7 +493,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/fe3d4ce/src/abstract-whiteboards-plugin.ts#L135">abstract-whiteboards-plugin.ts:135</a></li>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L156">abstract-whiteboards-plugin.ts:156</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -472,7 +510,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/fe3d4ce/src/abstract-whiteboards-plugin.ts#L299">abstract-whiteboards-plugin.ts:299</a></li>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L320">abstract-whiteboards-plugin.ts:320</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -513,7 +551,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/fe3d4ce/src/abstract-whiteboards-plugin.ts#L205">abstract-whiteboards-plugin.ts:205</a></li>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L226">abstract-whiteboards-plugin.ts:226</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -559,7 +597,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/fe3d4ce/src/abstract-whiteboards-plugin.ts#L320">abstract-whiteboards-plugin.ts:320</a></li>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L341">abstract-whiteboards-plugin.ts:341</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -606,7 +644,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/fe3d4ce/src/abstract-whiteboards-plugin.ts#L148">abstract-whiteboards-plugin.ts:148</a></li>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L169">abstract-whiteboards-plugin.ts:169</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -652,7 +690,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/fe3d4ce/src/abstract-whiteboards-plugin.ts#L210">abstract-whiteboards-plugin.ts:210</a></li>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L231">abstract-whiteboards-plugin.ts:231</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -698,7 +736,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/fe3d4ce/src/abstract-whiteboards-plugin.ts#L313">abstract-whiteboards-plugin.ts:313</a></li>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L334">abstract-whiteboards-plugin.ts:334</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -724,7 +762,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/fe3d4ce/src/abstract-whiteboards-plugin.ts#L200">abstract-whiteboards-plugin.ts:200</a></li>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L221">abstract-whiteboards-plugin.ts:221</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -747,7 +785,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/fe3d4ce/src/abstract-whiteboards-plugin.ts#L124">abstract-whiteboards-plugin.ts:124</a></li>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L145">abstract-whiteboards-plugin.ts:145</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -770,7 +808,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/fe3d4ce/src/abstract-whiteboards-plugin.ts#L188">abstract-whiteboards-plugin.ts:188</a></li>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L209">abstract-whiteboards-plugin.ts:209</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -793,7 +831,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/fe3d4ce/src/abstract-whiteboards-plugin.ts#L101">abstract-whiteboards-plugin.ts:101</a></li>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L107">abstract-whiteboards-plugin.ts:107</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -819,7 +857,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/fe3d4ce/src/abstract-whiteboards-plugin.ts#L244">abstract-whiteboards-plugin.ts:244</a></li>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L265">abstract-whiteboards-plugin.ts:265</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -845,7 +883,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/fe3d4ce/src/abstract-whiteboards-plugin.ts#L252">abstract-whiteboards-plugin.ts:252</a></li>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L273">abstract-whiteboards-plugin.ts:273</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -871,7 +909,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/fe3d4ce/src/abstract-whiteboards-plugin.ts#L159">abstract-whiteboards-plugin.ts:159</a></li>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L180">abstract-whiteboards-plugin.ts:180</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -900,7 +938,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/fe3d4ce/src/abstract-whiteboards-plugin.ts#L176">abstract-whiteboards-plugin.ts:176</a></li>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L197">abstract-whiteboards-plugin.ts:197</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -929,7 +967,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/fe3d4ce/src/abstract-whiteboards-plugin.ts#L142">abstract-whiteboards-plugin.ts:142</a></li>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L163">abstract-whiteboards-plugin.ts:163</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -955,7 +993,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/fe3d4ce/src/abstract-whiteboards-plugin.ts#L112">abstract-whiteboards-plugin.ts:112</a></li>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L133">abstract-whiteboards-plugin.ts:133</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -978,7 +1016,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/fe3d4ce/src/abstract-whiteboards-plugin.ts#L130">abstract-whiteboards-plugin.ts:130</a></li>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L151">abstract-whiteboards-plugin.ts:151</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1001,7 +1039,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/fe3d4ce/src/abstract-whiteboards-plugin.ts#L194">abstract-whiteboards-plugin.ts:194</a></li>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L215">abstract-whiteboards-plugin.ts:215</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1024,7 +1062,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/fe3d4ce/src/abstract-whiteboards-plugin.ts#L118">abstract-whiteboards-plugin.ts:118</a></li>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L139">abstract-whiteboards-plugin.ts:139</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1047,7 +1085,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/fe3d4ce/src/abstract-whiteboards-plugin.ts#L328">abstract-whiteboards-plugin.ts:328</a></li>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L349">abstract-whiteboards-plugin.ts:349</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -1070,6 +1108,47 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="watchboardusers" class="tsd-anchor"></a>
+					<h3>watch<wbr>Board<wbr>Users</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">watch<wbr>Board<wbr>Users<span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>usersData<span class="tsd-signature-symbol">: </span><a href="interfaces/userdata.html" class="tsd-signature-type" data-tsd-kind="Interface">UserData</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="modules.html#cancelcallback" class="tsd-signature-type" data-tsd-kind="Type alias">CancelCallback</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L122">abstract-whiteboards-plugin.ts:122</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>callback: <span class="tsd-signature-symbol">(</span>usersData<span class="tsd-signature-symbol">: </span><a href="interfaces/userdata.html" class="tsd-signature-type" data-tsd-kind="Interface">UserData</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>usersData<span class="tsd-signature-symbol">: </span><a href="interfaces/userdata.html" class="tsd-signature-type" data-tsd-kind="Interface">UserData</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>usersData: <a href="interfaces/userdata.html" class="tsd-signature-type" data-tsd-kind="Interface">UserData</a><span class="tsd-signature-symbol">[]</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="modules.html#cancelcallback" class="tsd-signature-type" data-tsd-kind="Type alias">CancelCallback</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
 					<a name="watchcarddata" class="tsd-anchor"></a>
 					<h3>watch<wbr>Card<wbr>Data</h3>
 					<ul class="tsd-signatures tsd-kind-function">
@@ -1079,7 +1158,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/fe3d4ce/src/abstract-whiteboards-plugin.ts#L274">abstract-whiteboards-plugin.ts:274</a></li>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L295">abstract-whiteboards-plugin.ts:295</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1123,7 +1202,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/fe3d4ce/src/abstract-whiteboards-plugin.ts#L259">abstract-whiteboards-plugin.ts:259</a></li>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L280">abstract-whiteboards-plugin.ts:280</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1164,7 +1243,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/fe3d4ce/src/abstract-whiteboards-plugin.ts#L282">abstract-whiteboards-plugin.ts:282</a></li>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L303">abstract-whiteboards-plugin.ts:303</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1208,7 +1287,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/fe3d4ce/src/abstract-whiteboards-plugin.ts#L266">abstract-whiteboards-plugin.ts:266</a></li>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L287">abstract-whiteboards-plugin.ts:287</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1249,7 +1328,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/fe3d4ce/src/abstract-whiteboards-plugin.ts#L165">abstract-whiteboards-plugin.ts:165</a></li>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L186">abstract-whiteboards-plugin.ts:186</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -1296,7 +1375,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/fe3d4ce/src/abstract-whiteboards-plugin.ts#L182">abstract-whiteboards-plugin.ts:182</a></li>
+									<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/a094aa5/src/abstract-whiteboards-plugin.ts#L203">abstract-whiteboards-plugin.ts:203</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -1370,6 +1449,9 @@
 						<a href="interfaces/templatedefinition.html" class="tsd-kind-icon">Template<wbr>Definition</a>
 					</li>
 					<li class=" tsd-kind-interface">
+						<a href="interfaces/userdata.html" class="tsd-kind-icon">User<wbr>Data</a>
+					</li>
+					<li class=" tsd-kind-interface">
 						<a href="interfaces/viewport.html" class="tsd-kind-icon">Viewport</a>
 					</li>
 					<li class=" tsd-kind-interface">
@@ -1394,10 +1476,16 @@
 						<a href="modules.html#createcards" class="tsd-kind-icon">create<wbr>Cards</a>
 					</li>
 					<li class=" tsd-kind-function">
+						<a href="modules.html#getboardusers" class="tsd-kind-icon">get<wbr>Board<wbr>Users</a>
+					</li>
+					<li class=" tsd-kind-function">
 						<a href="modules.html#getcarddata" class="tsd-kind-icon">get<wbr>Card<wbr>Data</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="modules.html#getcardsindex" class="tsd-kind-icon">get<wbr>Cards<wbr>Index</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#getcurrentboarduser" class="tsd-kind-icon">get<wbr>Current<wbr>Board<wbr>User</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="modules.html#getjirasites" class="tsd-kind-icon">get<wbr>Jira<wbr>Sites</a>
@@ -1479,6 +1567,9 @@
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
 						<a href="modules.html#waitforexecution" class="tsd-kind-icon">wait<wbr>For<wbr>Execution</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="modules.html#watchboardusers" class="tsd-kind-icon">watch<wbr>Board<wbr>Users</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="modules.html#watchcarddata" class="tsd-kind-icon">watch<wbr>Card<wbr>Data</a>
