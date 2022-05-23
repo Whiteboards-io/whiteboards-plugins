@@ -22,6 +22,7 @@ jobs:
       with:
         node-version: '12'
     - run: npm install
+    - run: npm run build
     - run: cd sample-plugins && npm install && cd ..
     - run: yarn docs
     - run: cd sample-plugins && npm run build && cd ..
