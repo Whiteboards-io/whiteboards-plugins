@@ -1,3 +1,9 @@
+export interface UserData {
+  id: string;
+  displayName: string;
+  photoURL: string;
+}
+
 export interface Viewport {
   zoom: number;
   rectX: number;
@@ -99,6 +105,21 @@ export type CancelCallback = () => void;
 
 export default interface AbstractWhiteboardsPlugin {
   resizePluginFrame: (width: string, height: string) => Promise<void>;
+
+  /**
+   * Get data of the current user.
+   */
+  getCurrentBoardUser: () => Promise<UserData>;
+
+  /**
+   * Get data of users who are currently present on board.
+   */
+  getBoardUsers: () => Promise<UserData[]>;
+
+  /**
+   * Watch data of users who are currently present on board.
+   */
+  watchBoardUsers: (callback: (usersData: UserData[]) => void) => CancelCallback;
 
   /**
    * Get current viewport coords, and zoom

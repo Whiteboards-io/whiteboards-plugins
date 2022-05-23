@@ -31,3 +31,11 @@ This configuration will be used to generate content of a board: list of issue ca
 ### Board inspect
 
 Board inspect is a tool added to whiteboard, which allows you to show and modify raw properties of the content: lines and cards.
+
+### Random person
+
+Randomly select a person from board participants.
+
+### Whiteboards Notepad
+
+This plugin exists in another repository: https://github.com/gtanczyk/whiteboards-notepad

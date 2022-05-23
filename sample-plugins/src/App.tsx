@@ -6,6 +6,8 @@ import * as HelloWorld from "./hello-world";
 import * as JiraIntegration from "./jira-integration";
 import BoardInspectPluginPage from "./board-inspect";
 import BoardInspectPlugiSidebar from "./board-inspect/plugin-sidebar";
+import RandomPersonPluginRoot from "./random-person";
+import RandomPersonSidebar from "./random-person/sidebar";
 
 function App() {
   const searchParams = new URLSearchParams(window.location.search);
@@ -33,6 +35,14 @@ function App() {
       return <BoardInspectPlugiSidebar />;
     } else if (page === null) {
       return <BoardInspectPluginPage />;
+    } else {
+      return null;
+    }
+  } else if (plugin === "random-person") {
+    if (page === "sidebar") {
+      return <RandomPersonSidebar />;
+    } else if (page === null) {
+      return <RandomPersonPluginRoot />;
     } else {
       return null;
     }

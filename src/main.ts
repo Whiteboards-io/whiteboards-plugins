@@ -13,6 +13,7 @@ import AbstractWhiteboardsPlugin, {
   ViewportTranslate,
   CardData,
   LineData,
+  UserData,
 } from "./abstract-whiteboards-plugin";
 import WhiteboardsPlugin from "./whiteboads-plugin";
 
@@ -29,6 +30,10 @@ export const {
   watchLinesIndex,
 
   resizePluginFrame,
+
+  getCurrentBoardUser,
+  getBoardUsers,
+  watchBoardUsers,
 
   getViewport,
   setViewport,
@@ -82,4 +87,5 @@ export type {
   CancelCallback,
   CardData,
   LineData,
+  UserData,
 };

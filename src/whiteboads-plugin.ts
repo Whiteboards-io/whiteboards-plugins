@@ -36,6 +36,7 @@ import {
   setPluginBoardUserData,
   watchPluginBoardUserData,
 } from "./plugin-client/plugin-client-board-user-data";
+import { getBoardUsers, getCurrentBoardUser, watchBoardUsers } from "./plugin-client/plugin-client-board-users";
 
 const WhiteboardsPlugin: AbstractWhiteboardsPlugin = {
   getCardData,
@@ -50,6 +51,10 @@ const WhiteboardsPlugin: AbstractWhiteboardsPlugin = {
   watchLinesIndex,
 
   resizePluginFrame,
+
+  getCurrentBoardUser,
+  getBoardUsers,
+  watchBoardUsers,
 
   getViewport,
   setViewport,
