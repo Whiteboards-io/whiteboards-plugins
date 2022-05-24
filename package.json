@@ -10,9 +10,14 @@
     "whiteboards",
     "plugins"
   ],
-  "main": "./dist/tsc/main.js",
-  "types": "./dist/tsc/main.d.ts",
-  "browser": "./dist/esbuild/browser.js",
+  "files": [
+    "lib/",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "main": "./lib/main.js",
+  "types": "./lib/main.d.ts",
   "scripts": {
     "lint": "eslint src/ --ext .js,.jsx,.ts,.tsx",
     "test": "jest",
