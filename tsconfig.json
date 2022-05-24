@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "module": "commonjs",
     "moduleResolution": "node",
     "declaration": true,
@@ -20,7 +20,8 @@
     "sourceMap": true,
     "outDir": "lib",
     "types": ["node", "jest"],
-    "lib": ["dom", "esnext"]
+    "lib": ["ES6", "DOM"]
   },
-  "include": ["src/**/*.ts"]
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
 }
