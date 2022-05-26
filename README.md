@@ -21,13 +21,7 @@ Prerequisites:
 In order to develop a plugin you need to setup a project with http server.
 For example using [Create React App](https://create-react-app.dev/docs/getting-started) and using http://localhost:3000 url in development console at Whiteboards.io
 
-Once you have your development environment set up, and a hello world running, go to https://app.whiteboards/$YOUR_ORGANISATION/developers and follow the instructions.
-
-### Production deployment
-
-You can make your Whiteboards.io plugin available for other users. In order to do that your plugin must be packaged in a ZIP file.
-
-_Details on production deployment coming soon!_
+Once you have your development environment set up, and a hello world running, go to https://app.whiteboards/$YOUR_ORGANISATION/access/config-plugins and follow the instructions.
 
 ## Usage
 
