@@ -10,7 +10,9 @@ This is a SDK that can be used for creating plugins for [Whiteboards.io](https:/
 
 Plugin is a HTML file with accompanying assets like javascript files, CSS stylesheets, or images. It will be loaded in an iframe on whiteboards.io for users, and organisations, which decide to enable it.
 It can communicate with Whiteboards.io through this SDK, which under the hood is using `window.postMessage` mechanism.
-Production version of plugins are loaded in a sandboxed iframe, with Content Security Policy configured to block all external network requests.
+Production version of plugins are loaded in a sandboxed iframe.
+
+Documentation: https://whiteboards-io.github.io/whiteboards-plugins/
 
 ### Development
 
