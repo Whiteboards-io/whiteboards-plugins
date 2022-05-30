@@ -39,3 +39,7 @@ Randomly select a person from board participants.
 ### Whiteboards Notepad
 
 This plugin exists in another repository: https://github.com/gtanczyk/whiteboards-notepad
+
+### Giphy integration
+
+External repository: https://gtanczyk.github.io/giphy-whiteboards/
