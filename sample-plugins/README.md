@@ -4,6 +4,13 @@ This repository contains a demonstration implementation of APIs exposed in `@whi
 
 ## Samples
 
+Before running examples, execute this in the project root directory:
+
+```
+npm install
+npm run build
+```
+
 Running examples:
 
 ```
