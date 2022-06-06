@@ -14,6 +14,7 @@ import AbstractWhiteboardsPlugin, {
   CardData,
   LineData,
   UserData,
+  JiraIssueData,
 } from "./abstract-whiteboards-plugin";
 import WhiteboardsPlugin from "./whiteboads-plugin";
 
@@ -92,4 +93,5 @@ export type {
   CardData,
   LineData,
   UserData,
+  JiraIssueData,
 };
