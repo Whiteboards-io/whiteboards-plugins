@@ -80,6 +80,7 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="abstractwhiteboardsplugin.html#closesidebar" class="tsd-kind-icon">close<wbr>Sidebar</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="abstractwhiteboardsplugin.html#createcards" class="tsd-kind-icon">create<wbr>Cards</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="abstractwhiteboardsplugin.html#getboardusers" class="tsd-kind-icon">get<wbr>Board<wbr>Users</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="abstractwhiteboardsplugin.html#getcarddata" class="tsd-kind-icon">get<wbr>Card<wbr>Data</a></li>
@@ -97,6 +98,7 @@
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="abstractwhiteboardsplugin.html#onhosttoplugin" class="tsd-kind-icon">on<wbr>Host<wbr>ToPlugin</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="abstractwhiteboardsplugin.html#onpluginmodalaction" class="tsd-kind-icon">on<wbr>Plugin<wbr>Modal<wbr>Action</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="abstractwhiteboardsplugin.html#onplugintoolboxclick" class="tsd-kind-icon">on<wbr>Plugin<wbr>Toolbox<wbr>Click</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="abstractwhiteboardsplugin.html#opensidebar" class="tsd-kind-icon">open<wbr>Sidebar</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="abstractwhiteboardsplugin.html#plugintohost" class="tsd-kind-icon">plugin<wbr>ToHost</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="abstractwhiteboardsplugin.html#registercustomcard" class="tsd-kind-icon">register<wbr>Custom<wbr>Card</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="abstractwhiteboardsplugin.html#registersidebartool" class="tsd-kind-icon">register<wbr>Sidebar<wbr>Tool</a></li>
@@ -127,12 +129,42 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="closesidebar" class="tsd-anchor"></a>
+					<h3>close<wbr>Sidebar</h3>
+					<div class="tsd-signature tsd-kind-icon">close<wbr>Sidebar<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/e007704/src/abstract-whiteboards-plugin.ts#L156">abstract-whiteboards-plugin.ts:156</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Close sidebar if currently open.</p>
+						</div>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="createcards" class="tsd-anchor"></a>
 					<h3>create<wbr>Cards</h3>
 					<div class="tsd-signature tsd-kind-icon">create<wbr>Cards<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>cards<span class="tsd-signature-symbol">: </span><a href="cardcreatedata.html" class="tsd-signature-type" data-tsd-kind="Interface">CardCreateData</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/aba96eb/src/abstract-whiteboards-plugin.ts#L237">abstract-whiteboards-plugin.ts:237</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/e007704/src/abstract-whiteboards-plugin.ts#L248">abstract-whiteboards-plugin.ts:248</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -172,7 +204,7 @@
 					<div class="tsd-signature tsd-kind-icon">get<wbr>Board<wbr>Users<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="userdata.html" class="tsd-signature-type" data-tsd-kind="Interface">UserData</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/aba96eb/src/abstract-whiteboards-plugin.ts#L117">abstract-whiteboards-plugin.ts:117</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/e007704/src/abstract-whiteboards-plugin.ts#L117">abstract-whiteboards-plugin.ts:117</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -202,7 +234,7 @@
 					<div class="tsd-signature tsd-kind-icon">get<wbr>Card<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>cardId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><a href="../modules.html#carddata" class="tsd-signature-type" data-tsd-kind="Type alias">CardData</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/aba96eb/src/abstract-whiteboards-plugin.ts#L252">abstract-whiteboards-plugin.ts:252</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/e007704/src/abstract-whiteboards-plugin.ts#L263">abstract-whiteboards-plugin.ts:263</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -238,7 +270,7 @@
 					<div class="tsd-signature tsd-kind-icon">get<wbr>Cards<wbr>Index<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/aba96eb/src/abstract-whiteboards-plugin.ts#L242">abstract-whiteboards-plugin.ts:242</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/e007704/src/abstract-whiteboards-plugin.ts#L253">abstract-whiteboards-plugin.ts:253</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -268,7 +300,7 @@
 					<div class="tsd-signature tsd-kind-icon">get<wbr>Current<wbr>Board<wbr>User<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="userdata.html" class="tsd-signature-type" data-tsd-kind="Interface">UserData</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/aba96eb/src/abstract-whiteboards-plugin.ts#L112">abstract-whiteboards-plugin.ts:112</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/e007704/src/abstract-whiteboards-plugin.ts#L112">abstract-whiteboards-plugin.ts:112</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -298,7 +330,7 @@
 					<div class="tsd-signature tsd-kind-icon">get<wbr>Jira<wbr>Sites<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="oauthsite.html" class="tsd-signature-type" data-tsd-kind="Interface">OauthSite</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/aba96eb/src/abstract-whiteboards-plugin.ts#L308">abstract-whiteboards-plugin.ts:308</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/e007704/src/abstract-whiteboards-plugin.ts#L319">abstract-whiteboards-plugin.ts:319</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -328,7 +360,7 @@
 					<div class="tsd-signature tsd-kind-icon">get<wbr>Line<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>lineId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><a href="../modules.html#linedata" class="tsd-signature-type" data-tsd-kind="Type alias">LineData</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/aba96eb/src/abstract-whiteboards-plugin.ts#L257">abstract-whiteboards-plugin.ts:257</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/e007704/src/abstract-whiteboards-plugin.ts#L268">abstract-whiteboards-plugin.ts:268</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -364,7 +396,7 @@
 					<div class="tsd-signature tsd-kind-icon">get<wbr>Lines<wbr>Index<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/aba96eb/src/abstract-whiteboards-plugin.ts#L247">abstract-whiteboards-plugin.ts:247</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/e007704/src/abstract-whiteboards-plugin.ts#L258">abstract-whiteboards-plugin.ts:258</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -394,7 +426,7 @@
 					<div class="tsd-signature tsd-kind-icon">get<wbr>Plugin<wbr>Board<wbr>Data<span class="tsd-signature-symbol">:</span> &lt;T&gt;<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/aba96eb/src/abstract-whiteboards-plugin.ts#L174">abstract-whiteboards-plugin.ts:174</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/e007704/src/abstract-whiteboards-plugin.ts#L185">abstract-whiteboards-plugin.ts:185</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -430,7 +462,7 @@
 					<div class="tsd-signature tsd-kind-icon">get<wbr>Plugin<wbr>Board<wbr>User<wbr>Data<span class="tsd-signature-symbol">:</span> &lt;T&gt;<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/aba96eb/src/abstract-whiteboards-plugin.ts#L191">abstract-whiteboards-plugin.ts:191</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/e007704/src/abstract-whiteboards-plugin.ts#L202">abstract-whiteboards-plugin.ts:202</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -466,7 +498,7 @@
 					<div class="tsd-signature tsd-kind-icon">get<wbr>Viewport<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="viewport.html" class="tsd-signature-type" data-tsd-kind="Interface">Viewport</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/aba96eb/src/abstract-whiteboards-plugin.ts#L127">abstract-whiteboards-plugin.ts:127</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/e007704/src/abstract-whiteboards-plugin.ts#L127">abstract-whiteboards-plugin.ts:127</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -496,7 +528,7 @@
 					<div class="tsd-signature tsd-kind-icon">hide<wbr>Plugin<wbr>Modal<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/aba96eb/src/abstract-whiteboards-plugin.ts#L156">abstract-whiteboards-plugin.ts:156</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/e007704/src/abstract-whiteboards-plugin.ts#L167">abstract-whiteboards-plugin.ts:167</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -526,7 +558,7 @@
 					<div class="tsd-signature tsd-kind-icon">oauth<wbr>Api<wbr>Request<span class="tsd-signature-symbol">:</span> &lt;T&gt;<span class="tsd-signature-symbol">(</span>siteId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, params<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span>, method<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, body<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/aba96eb/src/abstract-whiteboards-plugin.ts#L320">abstract-whiteboards-plugin.ts:320</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/e007704/src/abstract-whiteboards-plugin.ts#L331">abstract-whiteboards-plugin.ts:331</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -592,7 +624,7 @@
 					<div class="tsd-signature tsd-kind-icon">on<wbr>Custom<wbr>Card<wbr>Toolbar<wbr>Click<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>cardId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="../modules.html#cancelcallback" class="tsd-signature-type" data-tsd-kind="Type alias">CancelCallback</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/aba96eb/src/abstract-whiteboards-plugin.ts#L226">abstract-whiteboards-plugin.ts:226</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/e007704/src/abstract-whiteboards-plugin.ts#L237">abstract-whiteboards-plugin.ts:237</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -651,7 +683,7 @@
 					<div class="tsd-signature tsd-kind-icon">on<wbr>Host<wbr>ToPlugin<span class="tsd-signature-symbol">:</span> &lt;T&gt;<span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><a href="hostmessage.html" class="tsd-signature-type" data-tsd-kind="Interface">HostMessage</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="../modules.html#cancelcallback" class="tsd-signature-type" data-tsd-kind="Type alias">CancelCallback</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/aba96eb/src/abstract-whiteboards-plugin.ts#L341">abstract-whiteboards-plugin.ts:341</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/e007704/src/abstract-whiteboards-plugin.ts#L352">abstract-whiteboards-plugin.ts:352</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -715,7 +747,7 @@
 					<div class="tsd-signature tsd-kind-icon">on<wbr>Plugin<wbr>Modal<wbr>Action<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>actionId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="../modules.html#cancelcallback" class="tsd-signature-type" data-tsd-kind="Type alias">CancelCallback</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/aba96eb/src/abstract-whiteboards-plugin.ts#L169">abstract-whiteboards-plugin.ts:169</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/e007704/src/abstract-whiteboards-plugin.ts#L180">abstract-whiteboards-plugin.ts:180</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -778,7 +810,7 @@
 					<div class="tsd-signature tsd-kind-icon">on<wbr>Plugin<wbr>Toolbox<wbr>Click<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>customCardId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="../modules.html#cancelcallback" class="tsd-signature-type" data-tsd-kind="Type alias">CancelCallback</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/aba96eb/src/abstract-whiteboards-plugin.ts#L231">abstract-whiteboards-plugin.ts:231</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/e007704/src/abstract-whiteboards-plugin.ts#L242">abstract-whiteboards-plugin.ts:242</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -832,12 +864,52 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="opensidebar" class="tsd-anchor"></a>
+					<h3>open<wbr>Sidebar</h3>
+					<div class="tsd-signature tsd-kind-icon">open<wbr>Sidebar<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>props<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>contentUrl<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{ </span>pluginSidebarId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/e007704/src/abstract-whiteboards-plugin.ts#L151">abstract-whiteboards-plugin.ts:151</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Open sidebar with content, which will be loaded from the provided {@param props.contentUrl} or {@param props.pluginSidebarId}</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>param</dt>
+							<dd></dd>
+						</dl>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-interface">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>props<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>contentUrl<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{ </span>pluginSidebarId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>props: <span class="tsd-signature-symbol">{ </span>contentUrl<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{ </span>pluginSidebarId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="plugintohost" class="tsd-anchor"></a>
 					<h3>plugin<wbr>ToHost</h3>
 					<div class="tsd-signature tsd-kind-icon">plugin<wbr>ToHost<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>action<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, payload<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/aba96eb/src/abstract-whiteboards-plugin.ts#L334">abstract-whiteboards-plugin.ts:334</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/e007704/src/abstract-whiteboards-plugin.ts#L345">abstract-whiteboards-plugin.ts:345</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -882,7 +954,7 @@
 					<div class="tsd-signature tsd-kind-icon">register<wbr>Custom<wbr>Card<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>definition<span class="tsd-signature-symbol">: </span><a href="customcarddefinition.html" class="tsd-signature-type" data-tsd-kind="Interface">CustomCardDefinition</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/aba96eb/src/abstract-whiteboards-plugin.ts#L221">abstract-whiteboards-plugin.ts:221</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/e007704/src/abstract-whiteboards-plugin.ts#L232">abstract-whiteboards-plugin.ts:232</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -922,7 +994,7 @@
 					<div class="tsd-signature tsd-kind-icon">register<wbr>Sidebar<wbr>Tool<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>definition<span class="tsd-signature-symbol">: </span><a href="sidebartooldefinition.html" class="tsd-signature-type" data-tsd-kind="Interface">SidebarToolDefinition</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/aba96eb/src/abstract-whiteboards-plugin.ts#L145">abstract-whiteboards-plugin.ts:145</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/e007704/src/abstract-whiteboards-plugin.ts#L145">abstract-whiteboards-plugin.ts:145</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -962,7 +1034,7 @@
 					<div class="tsd-signature tsd-kind-icon">register<wbr>Template<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>definition<span class="tsd-signature-symbol">: </span><a href="templatedefinition.html" class="tsd-signature-type" data-tsd-kind="Interface">TemplateDefinition</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/aba96eb/src/abstract-whiteboards-plugin.ts#L209">abstract-whiteboards-plugin.ts:209</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/e007704/src/abstract-whiteboards-plugin.ts#L220">abstract-whiteboards-plugin.ts:220</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1002,7 +1074,7 @@
 					<div class="tsd-signature tsd-kind-icon">resize<wbr>Plugin<wbr>Frame<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/aba96eb/src/abstract-whiteboards-plugin.ts#L107">abstract-whiteboards-plugin.ts:107</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/e007704/src/abstract-whiteboards-plugin.ts#L107">abstract-whiteboards-plugin.ts:107</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -1036,7 +1108,7 @@
 					<div class="tsd-signature tsd-kind-icon">set<wbr>Card<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>cardId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, cardData<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules.html#carddata" class="tsd-signature-type" data-tsd-kind="Type alias">CardData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/aba96eb/src/abstract-whiteboards-plugin.ts#L265">abstract-whiteboards-plugin.ts:265</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/e007704/src/abstract-whiteboards-plugin.ts#L276">abstract-whiteboards-plugin.ts:276</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1081,7 +1153,7 @@
 					<div class="tsd-signature tsd-kind-icon">set<wbr>Line<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>lineId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, cardData<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="../modules.html#linedata" class="tsd-signature-type" data-tsd-kind="Type alias">LineData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/aba96eb/src/abstract-whiteboards-plugin.ts#L273">abstract-whiteboards-plugin.ts:273</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/e007704/src/abstract-whiteboards-plugin.ts#L284">abstract-whiteboards-plugin.ts:284</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1126,7 +1198,7 @@
 					<div class="tsd-signature tsd-kind-icon">set<wbr>Plugin<wbr>Board<wbr>Data<span class="tsd-signature-symbol">:</span> &lt;T&gt;<span class="tsd-signature-symbol">(</span>pluginData<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/aba96eb/src/abstract-whiteboards-plugin.ts#L180">abstract-whiteboards-plugin.ts:180</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/e007704/src/abstract-whiteboards-plugin.ts#L191">abstract-whiteboards-plugin.ts:191</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1172,7 +1244,7 @@
 					<div class="tsd-signature tsd-kind-icon">set<wbr>Plugin<wbr>Board<wbr>User<wbr>Data<span class="tsd-signature-symbol">:</span> &lt;T&gt;<span class="tsd-signature-symbol">(</span>pluginData<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/aba96eb/src/abstract-whiteboards-plugin.ts#L197">abstract-whiteboards-plugin.ts:197</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/e007704/src/abstract-whiteboards-plugin.ts#L208">abstract-whiteboards-plugin.ts:208</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1218,7 +1290,7 @@
 					<div class="tsd-signature tsd-kind-icon">set<wbr>Plugin<wbr>Modal<wbr>Action<wbr>Enabled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>actionId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, isEnabled<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/aba96eb/src/abstract-whiteboards-plugin.ts#L163">abstract-whiteboards-plugin.ts:163</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/e007704/src/abstract-whiteboards-plugin.ts#L174">abstract-whiteboards-plugin.ts:174</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1263,7 +1335,7 @@
 					<div class="tsd-signature tsd-kind-icon">set<wbr>Viewport<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>viewport<span class="tsd-signature-symbol">: </span><a href="viewport.html" class="tsd-signature-type" data-tsd-kind="Interface">Viewport</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/aba96eb/src/abstract-whiteboards-plugin.ts#L133">abstract-whiteboards-plugin.ts:133</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/e007704/src/abstract-whiteboards-plugin.ts#L133">abstract-whiteboards-plugin.ts:133</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1303,7 +1375,7 @@
 					<div class="tsd-signature tsd-kind-icon">show<wbr>Plugin<wbr>Modal<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>definition<span class="tsd-signature-symbol">: </span><a href="pluginmodaldefinition.html" class="tsd-signature-type" data-tsd-kind="Interface">PluginModalDefinition</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/aba96eb/src/abstract-whiteboards-plugin.ts#L151">abstract-whiteboards-plugin.ts:151</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/e007704/src/abstract-whiteboards-plugin.ts#L162">abstract-whiteboards-plugin.ts:162</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1343,7 +1415,7 @@
 					<div class="tsd-signature tsd-kind-icon">update<wbr>Template<wbr>Content<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>content<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/aba96eb/src/abstract-whiteboards-plugin.ts#L215">abstract-whiteboards-plugin.ts:215</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/e007704/src/abstract-whiteboards-plugin.ts#L226">abstract-whiteboards-plugin.ts:226</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1383,7 +1455,7 @@
 					<div class="tsd-signature tsd-kind-icon">viewport<wbr>Translate<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>viewportTranslate<span class="tsd-signature-symbol">: </span><a href="viewporttranslate.html" class="tsd-signature-type" data-tsd-kind="Interface">ViewportTranslate</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/aba96eb/src/abstract-whiteboards-plugin.ts#L139">abstract-whiteboards-plugin.ts:139</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/e007704/src/abstract-whiteboards-plugin.ts#L139">abstract-whiteboards-plugin.ts:139</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1423,7 +1495,7 @@
 					<div class="tsd-signature tsd-kind-icon">wait<wbr>For<wbr>Execution<span class="tsd-signature-symbol">:</span> &lt;T&gt;<span class="tsd-signature-symbol">(</span>executionId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, executionTimeout<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/aba96eb/src/abstract-whiteboards-plugin.ts#L349">abstract-whiteboards-plugin.ts:349</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/e007704/src/abstract-whiteboards-plugin.ts#L360">abstract-whiteboards-plugin.ts:360</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1474,7 +1546,7 @@
 					<div class="tsd-signature tsd-kind-icon">watch<wbr>Board<wbr>Users<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>usersData<span class="tsd-signature-symbol">: </span><a href="userdata.html" class="tsd-signature-type" data-tsd-kind="Interface">UserData</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="../modules.html#cancelcallback" class="tsd-signature-type" data-tsd-kind="Type alias">CancelCallback</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/aba96eb/src/abstract-whiteboards-plugin.ts#L122">abstract-whiteboards-plugin.ts:122</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/e007704/src/abstract-whiteboards-plugin.ts#L122">abstract-whiteboards-plugin.ts:122</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1528,7 +1600,7 @@
 					<div class="tsd-signature tsd-kind-icon">watch<wbr>Card<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>cardId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>cardData<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><a href="../modules.html#carddata" class="tsd-signature-type" data-tsd-kind="Type alias">CardData</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="../modules.html#cancelcallback" class="tsd-signature-type" data-tsd-kind="Type alias">CancelCallback</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/aba96eb/src/abstract-whiteboards-plugin.ts#L295">abstract-whiteboards-plugin.ts:295</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/e007704/src/abstract-whiteboards-plugin.ts#L306">abstract-whiteboards-plugin.ts:306</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1591,7 +1663,7 @@
 					<div class="tsd-signature tsd-kind-icon">watch<wbr>Cards<wbr>Index<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>cardIds<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="../modules.html#cancelcallback" class="tsd-signature-type" data-tsd-kind="Type alias">CancelCallback</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/aba96eb/src/abstract-whiteboards-plugin.ts#L280">abstract-whiteboards-plugin.ts:280</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/e007704/src/abstract-whiteboards-plugin.ts#L291">abstract-whiteboards-plugin.ts:291</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1649,7 +1721,7 @@
 					<div class="tsd-signature tsd-kind-icon">watch<wbr>Line<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>lineId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>lineDAta<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><a href="../modules.html#linedata" class="tsd-signature-type" data-tsd-kind="Type alias">LineData</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="../modules.html#cancelcallback" class="tsd-signature-type" data-tsd-kind="Type alias">CancelCallback</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/aba96eb/src/abstract-whiteboards-plugin.ts#L303">abstract-whiteboards-plugin.ts:303</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/e007704/src/abstract-whiteboards-plugin.ts#L314">abstract-whiteboards-plugin.ts:314</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1712,7 +1784,7 @@
 					<div class="tsd-signature tsd-kind-icon">watch<wbr>Lines<wbr>Index<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>lineIds<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="../modules.html#cancelcallback" class="tsd-signature-type" data-tsd-kind="Type alias">CancelCallback</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/aba96eb/src/abstract-whiteboards-plugin.ts#L287">abstract-whiteboards-plugin.ts:287</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/e007704/src/abstract-whiteboards-plugin.ts#L298">abstract-whiteboards-plugin.ts:298</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1770,7 +1842,7 @@
 					<div class="tsd-signature tsd-kind-icon">watch<wbr>Plugin<wbr>Board<wbr>Data<span class="tsd-signature-symbol">:</span> &lt;T&gt;<span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>pluginData<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="../modules.html#cancelcallback" class="tsd-signature-type" data-tsd-kind="Type alias">CancelCallback</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/aba96eb/src/abstract-whiteboards-plugin.ts#L186">abstract-whiteboards-plugin.ts:186</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/e007704/src/abstract-whiteboards-plugin.ts#L197">abstract-whiteboards-plugin.ts:197</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1834,7 +1906,7 @@
 					<div class="tsd-signature tsd-kind-icon">watch<wbr>Plugin<wbr>Board<wbr>User<wbr>Data<span class="tsd-signature-symbol">:</span> &lt;T&gt;<span class="tsd-signature-symbol">(</span>callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>pluginData<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="../modules.html#cancelcallback" class="tsd-signature-type" data-tsd-kind="Type alias">CancelCallback</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/aba96eb/src/abstract-whiteboards-plugin.ts#L203">abstract-whiteboards-plugin.ts:203</a></li>
+							<li>Defined in <a href="https://github.com/Whiteboards-io/whiteboards-plugins/blob/e007704/src/abstract-whiteboards-plugin.ts#L214">abstract-whiteboards-plugin.ts:214</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -1910,6 +1982,9 @@
 						<a href="abstractwhiteboardsplugin.html" class="tsd-kind-icon">Abstract<wbr>Whiteboards<wbr>Plugin</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="abstractwhiteboardsplugin.html#closesidebar" class="tsd-kind-icon">close<wbr>Sidebar</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="abstractwhiteboardsplugin.html#createcards" class="tsd-kind-icon">create<wbr>Cards</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
@@ -1959,6 +2034,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="abstractwhiteboardsplugin.html#onplugintoolboxclick" class="tsd-kind-icon">on<wbr>Plugin<wbr>Toolbox<wbr>Click</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="abstractwhiteboardsplugin.html#opensidebar" class="tsd-kind-icon">open<wbr>Sidebar</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="abstractwhiteboardsplugin.html#plugintohost" class="tsd-kind-icon">plugin<wbr>ToHost</a>
