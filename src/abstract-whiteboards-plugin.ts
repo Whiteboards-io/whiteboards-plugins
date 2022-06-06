@@ -93,6 +93,13 @@ export type LineData = {
   [prop: string]: unknown;
 };
 
+export type JiraIssueData = {
+  siteId: string;
+  issueId: number;
+  ts: number | null | undefined;
+  data: { id: string; key: string; [prop: string]: unknown } | null | undefined;
+};
+
 export type ExecutionId = string;
 
 export interface HostMessage<T> {
@@ -335,6 +342,24 @@ export default interface AbstractWhiteboardsPlugin {
     method?: string,
     body?: Record<string, unknown>
   ) => Promise<T>;
+
+  /**
+   * Get Jira issue data from given {@param siteId} and given {@param issueId}
+   * @param siteId
+   * @param issueId
+   */
+  getJiraIssueData: (payload: { siteId: string; issueId: number }) => Promise<JiraIssueData>;
+
+  /**
+   * Listen on changes to Jira issue data from given {@param siteId} and given {@param issueId}
+   * @param siteId
+   * @param issueId
+   * @param callback
+   */
+  watchJiraIssueData: (
+    payload: { siteId: string; issueId: number },
+    callback: (data: JiraIssueData) => void
+  ) => CancelCallback;
 
   /**
    * Low level API for communication with the host app

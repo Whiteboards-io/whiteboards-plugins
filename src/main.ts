@@ -58,6 +58,8 @@ export const {
 
   getJiraSites,
   oauthApiRequest,
+  getJiraIssueData,
+  watchJiraIssueData,
 
   registerTemplate,
   updateTemplateContent,

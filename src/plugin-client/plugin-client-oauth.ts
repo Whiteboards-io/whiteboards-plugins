@@ -1,4 +1,5 @@
-import { pluginToHost, waitForExecution } from "./index";
+import { onHostToPlugin, pluginToHost, waitForExecution } from "./index";
+import { CancelCallback, HostMessage, JiraIssueData } from "../abstract-whiteboards-plugin";
 
 export interface OauthSite {
   url: string;
@@ -35,4 +36,29 @@ export async function oauthApiRequest<T>(
   } else {
     return response;
   }
+}
+
+export async function getJiraIssueData(payload: { siteId: string; issueId: number }): Promise<JiraIssueData> {
+  return await waitForExecution<JiraIssueData>(pluginToHost("getJiraIssueData", payload));
+}
+
+export function watchJiraIssueData(
+  payload: {
+    siteId: string;
+    issueId: number;
+  },
+  callback: (data: JiraIssueData) => void
+): CancelCallback {
+  const executionId = pluginToHost("watchJiraIssueData", payload);
+
+  const cancel = onHostToPlugin<JiraIssueData>((message: HostMessage<JiraIssueData>) => {
+    if (message.executionId === executionId) {
+      callback(message.payload);
+    }
+  });
+
+  return () => {
+    cancel();
+    pluginToHost("cancelJiraIssueDataWatch", { executionId });
+  };
 }

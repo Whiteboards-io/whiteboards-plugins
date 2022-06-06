@@ -5,6 +5,7 @@ import {
   setLineData,
   watchCardData,
   watchCardsIndex,
+  watchJiraIssueData,
   watchLineData,
   watchLinesIndex,
 } from "@whiteboards-io/plugins";
@@ -20,7 +21,7 @@ export default function PluginSidebar() {
   if (object) {
     return (
       <>
-        <h1 style={{ marginLeft: "40px" }}>Board inspect</h1>
+        <h1 style={{ marginLeft: "40px", marginTop: "0px" }}>Board inspect</h1>
         <div style={{ position: "absolute", right: 0, top: 0 }}>
           <Button onClick={() => setObject(null)}>Back</Button>
         </div>
@@ -66,6 +67,22 @@ function CardView({ cardId }: { cardId: string }) {
     <>
       <h2>Card: {cardId}</h2>
       <JsonEditor value={cardData} onChange={(value) => setCardData(cardId, value)} />
+      {cardData?.siteId && cardData?.issueId && (
+        <IssueDataView siteId={cardData?.siteId as string} issueId={cardData?.issueId as number} />
+      )}
+    </>
+  );
+}
+
+function IssueDataView({ issueId, siteId }: { issueId: number; siteId: string }) {
+  const issueData = useWatchObjectData({ issueId, siteId }, watchJiraIssueData);
+
+  return (
+    <>
+      <h2>
+        Issue: {issueId}@{siteId}
+      </h2>
+      <JsonEditor value={issueData} />
     </>
   );
 }
