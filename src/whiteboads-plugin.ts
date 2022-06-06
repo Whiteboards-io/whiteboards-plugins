@@ -5,7 +5,7 @@ import { registerTemplate, updateTemplateContent } from "./plugin-client/plugin-
 import { onHostToPlugin, pluginToHost, waitForExecution } from "./plugin-client";
 import { getViewport, setViewport, viewportTranslate } from "./plugin-client/plugin-client-viewport";
 import { getPluginBoardData, setPluginBoardData, watchPluginBoardData } from "./plugin-client/plugin-client-board-data";
-import { registerSidebarTool } from "./plugin-client/plugin-client-sidebar-tools";
+import { closeSidebar, openSidebar, registerSidebarTool } from "./plugin-client/plugin-client-sidebar-tools";
 import {
   hidePluginModal,
   onPluginModalAction,
@@ -61,6 +61,8 @@ const WhiteboardsPlugin: AbstractWhiteboardsPlugin = {
   viewportTranslate,
 
   registerSidebarTool,
+  openSidebar,
+  closeSidebar,
 
   showPluginModal,
   hidePluginModal,

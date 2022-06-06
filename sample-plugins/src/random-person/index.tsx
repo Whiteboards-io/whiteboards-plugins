@@ -1,14 +1,21 @@
 import { useEffect } from "react";
-import { registerSidebarTool } from "@whiteboards-io/plugins";
+import { onPluginToolboxClick, openSidebar, registerCustomCard } from "@whiteboards-io/plugins";
 import icon from "./icon.svg";
 
 export default function RandomPersonPluginRoot() {
   useEffect(() => {
-    registerSidebarTool({
-      id: "random-person",
+    registerCustomCard({
+      contentUrl: "",
       icon: window.location.origin + window.location.pathname + icon,
+      id: "random-person",
+      toolbarOperations: [],
       tooltip: "Random person",
-      contentUrl: window.location.origin + window.location.pathname + "?plugin=random-person&page=sidebar",
+    });
+
+    onPluginToolboxClick((props) => {
+      openSidebar({
+        contentUrl: window.location.origin + window.location.pathname + "?plugin=random-person&page=sidebar",
+      });
     });
   }, []);
 
