@@ -40,6 +40,8 @@ export const {
   viewportTranslate,
 
   registerSidebarTool,
+  openSidebar,
+  closeSidebar,
 
   showPluginModal,
   hidePluginModal,

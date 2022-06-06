@@ -145,6 +145,17 @@ export default interface AbstractWhiteboardsPlugin {
   registerSidebarTool: (definition: SidebarToolDefinition) => Promise<void>;
 
   /**
+   * Open sidebar with content, which will be loaded from the provided {@param props.contentUrl} or {@param props.pluginSidebarId}
+   * @param props
+   */
+  openSidebar: (props: { contentUrl: string } | { pluginSidebarId: string }) => Promise<void>;
+
+  /**
+   * Close sidebar if currently open.
+   */
+  closeSidebar: () => Promise<void>;
+
+  /**
    * Open a modal dialog accordingly to the definition.
    * @param definition
    */
