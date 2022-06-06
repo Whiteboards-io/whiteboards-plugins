@@ -18,7 +18,7 @@ Documentation: https://whiteboards-io.github.io/whiteboards-plugins/
 
 Prerequisites:
 
-- Whiteboards.io organisation account: https://app.whiteboards/signup
+- Whiteboards.io organisation account: https://app.whiteboards.io
 
 In order to develop a plugin you need to setup a project with http server.
 For example using [Create React App](https://create-react-app.dev/docs/getting-started) and using http://localhost:3000 url in development console at Whiteboards.io
