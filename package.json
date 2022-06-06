@@ -1,6 +1,6 @@
 {
   "name": "@whiteboards-io/plugins",
-  "version": "1.7.3",
+  "version": "1.8.0",
   "description": "This is a library which can be used for development of plugins to Whiteboards.io app",
   "author": "Spartez Software <support@spartez-software.com>",
   "repository": "https://github.com/Whiteboards-io/whiteboards-plugins",
