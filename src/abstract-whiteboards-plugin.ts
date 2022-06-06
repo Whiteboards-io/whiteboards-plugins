@@ -337,7 +337,7 @@ export default interface AbstractWhiteboardsPlugin {
    * @param siteId
    * @param issueId
    */
-  getJiraIssueData: (siteId: string, issueId: number) => Promise<JiraIssueData>;
+  getJiraIssueData: (payload: { siteId: string; issueId: number }) => Promise<JiraIssueData>;
 
   /**
    * Listen on changes to Jira issue data from given {@param siteId} and given {@param issueId}
@@ -345,7 +345,10 @@ export default interface AbstractWhiteboardsPlugin {
    * @param issueId
    * @param callback
    */
-  watchJiraIssueData: (siteId: string, issueId: number, callback: (data: JiraIssueData) => void) => CancelCallback;
+  watchJiraIssueData: (
+    payload: { siteId: string; issueId: number },
+    callback: (data: JiraIssueData) => void
+  ) => CancelCallback;
 
   /**
    * Low level API for communication with the host app

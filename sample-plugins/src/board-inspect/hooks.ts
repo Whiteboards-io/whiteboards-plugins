@@ -4,16 +4,18 @@ import {
   LineData,
   watchCardData,
   watchCardsIndex,
+  watchJiraIssueData,
   watchLineData,
   watchLinesIndex,
 } from "@whiteboards-io/plugins";
+import { JiraIssueData } from "../../../lib/abstract-whiteboards-plugin";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-export function useWatchObjectData<T = CardData | LineData>(
-  objectId: string,
-  watchFn: typeof watchCardData | typeof watchLineData
+export function useWatchObjectData<T = CardData | LineData | JiraIssueData>(
+  objectId: unknown,
+  watchFn: typeof watchCardData | typeof watchLineData | typeof watchJiraIssueData
 ) {
-  const [data, setData] = useState<CardData | LineData | null>(null);
+  const [data, setData] = useState<CardData | LineData | JiraIssueData | null>(null);
 
   useEffect(() => {
     // @ts-ignore

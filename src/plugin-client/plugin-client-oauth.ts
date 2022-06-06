@@ -38,16 +38,18 @@ export async function oauthApiRequest<T>(
   }
 }
 
-export async function getJiraIssueData(siteId: string, issueId: number): Promise<JiraIssueData> {
-  return await waitForExecution<JiraIssueData>(pluginToHost("getJiraIssueData", { siteId, issueId }));
+export async function getJiraIssueData(payload: { siteId: string; issueId: number }): Promise<JiraIssueData> {
+  return await waitForExecution<JiraIssueData>(pluginToHost("getJiraIssueData", payload));
 }
 
 export function watchJiraIssueData(
-  siteId: string,
-  issueId: number,
+  payload: {
+    siteId: string;
+    issueId: number;
+  },
   callback: (data: JiraIssueData) => void
 ): CancelCallback {
-  const executionId = pluginToHost("watchJiraIssueData", { siteId, issueId });
+  const executionId = pluginToHost("watchJiraIssueData", payload);
 
   const cancel = onHostToPlugin<JiraIssueData>((message: HostMessage<JiraIssueData>) => {
     if (message.executionId === executionId) {
@@ -57,6 +59,6 @@ export function watchJiraIssueData(
 
   return () => {
     cancel();
-    pluginToHost("cancelWatchJiraIssueData", { executionId });
+    pluginToHost("cancelJiraIssueDataWatch", { executionId });
   };
 }
