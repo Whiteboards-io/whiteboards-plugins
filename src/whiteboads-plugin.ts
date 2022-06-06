@@ -1,6 +1,11 @@
 import AbstractWhiteboardsPlugin from "./abstract-whiteboards-plugin";
 
-import { getJiraSites, oauthApiRequest } from "./plugin-client/plugin-client-oauth";
+import {
+  getJiraIssueData,
+  getJiraSites,
+  oauthApiRequest,
+  watchJiraIssueData,
+} from "./plugin-client/plugin-client-oauth";
 import { registerTemplate, updateTemplateContent } from "./plugin-client/plugin-client-templates";
 import { onHostToPlugin, pluginToHost, waitForExecution } from "./plugin-client";
 import { getViewport, setViewport, viewportTranslate } from "./plugin-client/plugin-client-viewport";
@@ -77,6 +82,8 @@ const WhiteboardsPlugin: AbstractWhiteboardsPlugin = {
 
   getJiraSites,
   oauthApiRequest,
+  getJiraIssueData,
+  watchJiraIssueData,
 
   registerTemplate,
   updateTemplateContent,
