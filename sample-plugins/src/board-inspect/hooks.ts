@@ -15,7 +15,7 @@ export function useWatchObjectData<T = CardData | LineData | JiraIssueData>(
   objectId: unknown,
   watchFn: typeof watchCardData | typeof watchLineData | typeof watchJiraIssueData
 ) {
-  const [data, setData] = useState<CardData | LineData | JiraIssueData | null>(null);
+  const [data, setData] = useState<T | null>(null);
 
   useEffect(() => {
     // @ts-ignore

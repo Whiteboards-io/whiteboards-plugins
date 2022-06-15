@@ -48,6 +48,7 @@
     "@atlaskit/select": "^13.3.1",
     "@atlaskit/textfield": "^5.0.1",
     "@types/jsoneditor": "^9.5.1",
+    "@types/lodash": "^4.14.182",
     "@types/react-router-dom": "^5.1.7",
     "@types/styled-components": "^5.1.25",
     "@types/underscore": "^1.11.4",

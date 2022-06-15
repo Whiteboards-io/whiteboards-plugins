@@ -8,6 +8,8 @@ import BoardInspectPluginPage from "./board-inspect";
 import BoardInspectPlugiSidebar from "./board-inspect/plugin-sidebar";
 import RandomPersonPluginRoot from "./random-person";
 import RandomPersonSidebar from "./random-person/sidebar";
+import JiraCalculator from "./jira-calculator";
+import CalculatorCard from "./jira-calculator/calculator-card";
 
 function App() {
   const searchParams = new URLSearchParams(window.location.search);
@@ -43,6 +45,14 @@ function App() {
       return <RandomPersonSidebar />;
     } else if (page === null) {
       return <RandomPersonPluginRoot />;
+    } else {
+      return null;
+    }
+  } else if (plugin === "jira-calculator") {
+    if (page === "card") {
+      return <CalculatorCard />;
+    } else if (page === null) {
+      return <JiraCalculator />;
     } else {
       return null;
     }
