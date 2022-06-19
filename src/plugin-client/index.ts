@@ -21,7 +21,6 @@ export function onHostToPlugin<T>(callback: (message: HostMessage<T>) => void): 
     try {
       const message = JSON.parse(event.data);
       if (message.action) {
-        console.debug("Host to plugin", message);
         callback(message);
       }
     } catch (e) {
